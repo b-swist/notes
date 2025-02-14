@@ -8,9 +8,14 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{amsmath, amssymb}
-\usepackage{esvect}
+\usepackage{siunitx}
 
-\newcommand{\F}[1]{\vv*{F}{\mathrm{#1}}}
+% \newcommand{\Vc}[2]{\vec{#1}_{\mathrm{#2}}}
+% \newcommand{\Sc}[2]{#1_{\mathrm{#2}}}
+% \newcommand{\F}[1]{\Vc{F}{#1}}
+% \newcommand{\E}[1]{\Sc{E}{#1}}
+% \newcommand{\W}[1]{\Sc{W}{#1}}
+\newcommand{\F}{\vec{F}}
 
 \begin{document}
   \maketitle
@@ -23,43 +28,89 @@
     \subsection{Zasady dynamiki Newtona}
       \subsubsection{Pierwsza zasada}
         \begin{equation*}
-          \F{w} = 0 \Rightarrow \vv{v} = 0 \lor \vv{v} = const.
+          \F_w = 0 \Rightarrow \vec{v} = 0 \lor \vec{v} = const.
         \end{equation*}
       \subsubsection{Druga zasada}
         \begin{align*}
-          \F{w} \neq 0 &\Rightarrow a = const.\\
-          \vv{a} = \frac{\F{w}}{m} &\Rightarrow \F{w} = m\vv{a}
+          \F_w \neq 0 &\Rightarrow a = const.\\
+          \vec{a} = \frac{\F_w}{m} &\Rightarrow \F_w = m\vec{a}
         \end{align*}
       \subsubsection{Trzecia zasada}
         \begin{align*}
-          \F{AB} &= -\F{BA}\\
-          F_{\mathrm{AB}} &= F_{\mathrm{BA}}
+          \F_{AB} &= -\F_{BA}\\
+          F_{AB} &= F_{BA}
         \end{align*}
     \subsection{Ruch na równi pochyłej}
       \begin{align*}
-        \frac{\F{Z}}{\F{g}} = \sin\alpha &\Rightarrow \F{Z} = \F{g}\sin\alpha = mg\sin\alpha\\
-        \frac{\F{N}}{\F{g}} = \cos\alpha &\Rightarrow \F{N} = \F{g}\cos\alpha = mg\cos\alpha
+        \frac{\F_Z}{\F_g} = \sin\alpha &\Rightarrow \F_Z = \F_g\sin\alpha = mg\sin\alpha\\
+        \frac{\F_N}{\F_g} = \cos\alpha &\Rightarrow \F_N = \F_g\cos\alpha = mg\cos\alpha
       \end{align*}
     \subsection{tbd}
     \subsection{Pęd ciała}
       \begin{equation*}
-        \vv{p} = m\vv{v}
+        \vec{p} = m\vec{v}
       \end{equation*}
       \begin{equation*}
         \Delta p = F\Delta t
       \end{equation*}
       \subsubsection{Zasada zachowania pędu}
         \begin{equation*}
-          \Delta \vv{p} = 0 \Leftrightarrow \vv{p} = const.
+          \Delta \vec{p} = 0 \Leftrightarrow \vec{p} = const.
         \end{equation*}
       \subsection{Środek masy}
         \begin{equation*}
-          x_{\mathrm{c}} = \frac{m_{1}x_{1}+m_{2}x_{2}+\dots+m_{n}x_{n}}{m_{1}+m_{2}+\dots+m_{n}}
+          x_c = \frac{m_1x_1+m_2x_2+\dots+m_nx_n}{m_1+m_2+\dots+m_n}
         \end{equation*}
-
+      \subsection{Tarcie}
+        \begin{align*}
+          T_s &= \mu_sF_N\\
+          T_k &\leqslant \mu_kF_N
+        \end{align*}
+      \subsection{Siła dośrodkowa}
+        \begin{equation*}
+          F_{do} = \frac{mv^2}{r}
+        \end{equation*}
+        \subsection{Siła bezwładności}
+        \begin{equation*}
+          \F_b = -m\vec{a}
+        \end{equation*}
   \newpage
   \section{Praca, moc, energia}
-
+    \subsection{Praca}
+      \begin{align*}
+        W &= \F\Delta\vec{r} = F\Delta r \cos\measuredangle\left(\F, \Delta\vec{r}\right)\\
+        \text{dla } \alpha = \ang{0}\colon\quad W &= F\Delta r\\
+        \text{dla } \alpha = \ang{90}\colon\quad W &= 0
+      \end{align*}
+    \subsection{Moc}
+      \begin{align*}
+        &P = \frac{W}{t}\quad\\
+      \text{dla }v = const.\colon\quad &P = Fv
+      \end{align*}
+    \subsection{Energia mechaniczna}
+      \subsubsection{Energia kinetyczna}
+        \begin{align*}
+          &E_k = \frac{mv^2}{2}\\
+          &\Delta E_k = W
+        \end{align*}
+      \subsubsection{Energia potencjalna}
+        \begin{align*}
+          &E_p = mgh\\
+          &\Delta E_p = W
+        \end{align*}
+      \subsubsection{Zasada zachowania energii}
+        \begin{align*}
+          &E_c = E_k + E_p\\
+          &E_c = const. \Rightarrow \Delta E_c = 0\\
+          &\Delta E_c = \Delta E_p + \Delta E_k
+        \end{align*}
+    \subsection{Sprawność}
+      \begin{equation*}
+        \eta = \frac{E_{u\dot{z}yt.}}{E_{pob.}}\: (\cdot 100\%) = \frac{W_{u\dot{z}yt.}}{E_{pob.}}\: (\cdot 100\%)
+      \end{equation*}
+      \begin{equation*}
+        \eta_{u\dot{z}yt.} = \sum_{i=1}^{n} \eta_i
+      \end{equation*}
   \newpage
   \section{Hydrostatyka}
 
