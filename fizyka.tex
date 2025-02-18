@@ -1,5 +1,4 @@
 \documentclass{article}
-
 \title{Fizyka}
 \date{2025-02-12}
 \author{Bartosz Świst}
@@ -100,7 +99,29 @@
         x = v_0t = v_0\sqrt{\frac{2h}{g}}\\
         v = \sqrt{v_0^2 + v_y^2} = \sqrt{v_0^2 + (gt)^2}
       \end{gather}
-    \subsection{Rzut skośny}
+    \subsection{Rzut ukośny}
+      \begin{center}
+        \begin{tikzpicture}
+          \draw[gray, very thin] (0, 0) grid (9.8, 3.8);
+          \draw[->, thin] (-0.3, 0) -- (10, 0) node[below] {$x$};
+          \draw[->, thin] (0, -0.3) -- (0, 4) node[left] {$y$};
+          \draw (4, 3) parabola (0, 0);
+          \draw (4, 3) parabola (8, 0);
+
+          \draw[->, thick] (0, 0) -- (0.8, 0) node[midway, below] {$\vec v_{0_x}$};
+          \draw[->, thick] (0, 0) -- (0, 1) node[midway, left] {$\vec v_{0_y}$};
+          \draw[->, thick] (0, 0) -- (0.8, 1) node[midway, above, xshift=-1] {$\vec v_0$};
+          \draw (0.6, 0) arc (0:50:0.6) node[below, xshift=-0.8, yshift=-2.5] {$\alpha$};
+
+          \draw[->, thick] (4, 3) -- (4.8, 3) node[midway, below] {$\vec v_{0_x}$};
+
+          \draw[->, thick] (8, 0) -- (8.8, 0) node[midway, above] {$\vec v_{0_x}$};
+          \draw[->, thick] (8, 0) -- (8, -1) node[midway, left] {$\vec v_y$};
+          \draw[->, thick] (8, 0) -- (8.8, -1) node[midway, right] {$\vec v$};
+
+          \draw[dotted, thick] (4, 0) -- (4, 3) node[midway, right] {$h_{max}$};
+        \end{tikzpicture}
+      \end{center}
       \begin{align}
         v_{0_x} &= v_0\cos\alpha\\
         v_{0_y} &= v_0\sin\alpha
@@ -624,12 +645,16 @@
         \Delta U = Q_V = nC_V\Delta T
       \end{equation}
       \subsection{Silnik cieplny}
-        \begin{tikzpicture}
-          \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
-          \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
-          \draw[thick] (1, 3) -- (2.5, 2.6);
-          \draw[thick] (2.5, 2.6) -- (3, 1);
-        \end{tikzpicture}
+        \begin{center}
+          \begin{tikzpicture}[scale=1.5]
+            \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
+            \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
+            \draw[thick, ->] (1, 3) -- (2.5, 2.6);
+            \draw[thick, ->] (2.5, 2.6) -- (3, 1);
+            \draw[thick, <-] (1, 3) arc (180:270:2);
+            \draw (2.05, 2.05) node {\LARGE $W$};
+          \end{tikzpicture}
+        \end{center}
       \begin{equation}
         \eta = \frac{|Q_1|-|Q_2|}{Q_1} = \frac{T_1 - T_2}{T_1}
       \end{equation}
