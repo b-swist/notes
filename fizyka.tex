@@ -9,7 +9,7 @@
 
 \numberwithin{equation}{section}
 \DeclareMathOperator{\tg}{tg}
-\newcommand{\unit}[1]{\, \left[\mathrm{#1}\right]}
+\newcommand{\unit}[1]{\,\left[\mathrm{#1}\right]}
 
 \begin{document}
   \maketitle
@@ -19,12 +19,12 @@
       \subsubsection{Iloczyn skalarny}
         \begin{gather}
           c = \vec a \cdot \vec b\\
-          c = |\vec a|\cdot |\vec b|\cdot\cos\measuredangle (\vec a, \vec b)
+          c = |\vec a|\cdot |\vec b|\cdot\cos\measuredangle(\vec a, \vec b)
         \end{gather}
       \subsubsection{Iloczyn wektorowy}
         \begin{gather}
           \vec c = \vec a \times \vec b\\
-          \vec c = |\vec a|\cdot |\vec b|\cdot\sin\measuredangle (\vec a, \vec b)
+          \vec c = |\vec a|\cdot |\vec b|\cdot\sin\measuredangle(\vec a, \vec b)
         \end{gather}
     \subsection{Opis ruchu}
       \begin{equation}
@@ -227,7 +227,7 @@
     \subsection{Praca}
       \begin{gather}
         W = \vec F\Delta\vec r \unit{J}\\
-        W = F\Delta r \cos\measuredangle (\vec F, \Delta\vec r)
+        W = F\Delta r \cos\measuredangle(\vec F, \Delta\vec r)
       \end{gather}
       dla $\alpha = 0^\circ$:
       \begin{equation}
@@ -323,7 +323,7 @@
       \subsubsection{Prędkość liniowa (styczna)}
         \begin{gather}
           \vec v = \vec\omega \times \vec r\unit{\frac{m}{s}}\\
-          v = \omega r\sin\measuredangle (\vec\omega, \vec r)
+          v = \omega r\sin\measuredangle(\vec\omega, \vec r)
         \end{gather}
         dla $\vec\omega \perp \vec r$:
         \begin{equation}
@@ -346,13 +346,11 @@
       \begin{equation}
         I = \sum_{i=1}^n m_ir_i^2 \unit{kg\cdot m^2}
       \end{equation}
-      \subsubsection{Momenty bezwładności wybranych brył}
-        \begin{align}
-          \text{kula: } I_0 &= \frac{2}{5}mr^2\\
-          \text{walec: } I_0 &= \frac{1}{2}mr^2\\
-          \text{pręt: } I_0 &= \frac{1}{12}ml^2\\
-          \text{rura grubościenna: } I_0 &= \frac{1}{2}m(r_1^2 + r_2^2)
-        \end{align}
+        \subsubsection{Momenty bezwładności wybranych brył}
+        kula: $I_0 = \frac{2}{5}mr^2$\\
+        walec: $I_0 = \frac{1}{2}mr^2$\\
+        pręt: $I_0 = \frac{1}{12}ml^2$\\
+        rura grubościenna: $I_0 = \frac{1}{2}m(r_1^2 + r_2^2)$
       \subsubsection{Twierdzenie Steinera}
         \begin{equation}
           I = I_0 +mx^2
@@ -365,7 +363,7 @@
     \subsection{Moment siły}
       \begin{gather}
         \vec M = \vec r\times\vec F \unit{N\cdot m}\\
-        M = rF\sin\measuredangle (\vec r, \vec F)
+        M = rF\sin\measuredangle(\vec r, \vec F)
       \end{gather}
       dla $\vec r \perp \vec F$:
       \begin{equation}
@@ -388,15 +386,15 @@
     \subsection{Moment pędu}
       \begin{gather}
         \vec L = \vec r \times\vec p \unit{\frac{kg\cdot m^2}{s}}\\
-        L = rp\sin\measuredangle (\vec r,\vec p)\\
-        L = mrv\sin\measuredangle (\vec r,\vec v)
+        L = rp\sin\measuredangle(\vec r,\vec p)\\
+        L = mrv\sin\measuredangle(\vec r,\vec v)
       \end{gather}
       dla $\vec p \perp \vec r$:
       \begin{equation}
         L = rp = mrv
       \end{equation}
       \begin{equation}
-        L = \sum_{i=1}^n m_ir_iv_i\sin\measuredangle (\vec r,\vec v)
+        L = \sum_{i=1}^n m_ir_iv_i\sin\measuredangle(\vec r,\vec v)
       \end{equation}
       dla $\vec r \perp \vec v$:
       \begin{equation}
@@ -586,7 +584,7 @@
       dla $Q > 0$ ciepło zostało pobrane\\
       dla $Q < 0$ ciepło zostało oddane
       \begin{gather}
-        W_z = F_z\Delta x\cos\measuredangle (\vec F_z, \Delta\vec x)\\
+        W_z = F_z\Delta x\cos\measuredangle(\vec F_z, \Delta\vec x)\\
         W_z = -W_{gazu}
       \end{gather}
       dla $W_z > 0$:
@@ -827,5 +825,30 @@
 
   \newpage
   \section{Magnetyzm}
+    \subsection{Indukcja magnetyczna}
+      \subsubsection{Pole magnetyczne prostoliniowego przewodnika}
+        \begin{equation}
+          B = \frac{\mu_0 I}{2\pi r} \unit{T}
+        \end{equation}
+        gdzie:
+        \begin{equation}
+          \mu_0 = 4\pi\cdot 10^{-7} \unit{\frac{Tm}{A},\;\frac{N}{A^2}}
+        \end{equation}
+      \subsubsection{Pole magnetyczne gęstej zwojnicy}
+        \begin{equation}
+          B = \frac{\mu_0 nI}{l} \unit{T}
+        \end{equation}
+      \subsubsection{Pole magnetyczne pętli}
+        \begin{equation}
+          B = \frac{\mu_0 I}{2r} \unit{T}
+        \end{equation}
+    \subsection{Siła elektrodynamiczna}
+      \begin{equation}
+        F = BI\Delta l\sin\measuredangle(\Delta\vec l, \vec B) \unit{N}
+      \end{equation}
+      dla $\Delta\vec l \perp \vec B$:
+      \begin{equation}
+        F = BI\Delta l
+      \end{equation}
 
 \end{document}
