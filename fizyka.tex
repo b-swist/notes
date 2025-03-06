@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{report}
 \title{Fizyka}
 \date{2025-02-12}
 \author{Bartosz Świst}
@@ -7,26 +7,26 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, tikz}
 
-\numberwithin{equation}{section}
+\numberwithin{equation}{chapter}
 \DeclareMathOperator{\tg}{tg}
 \newcommand{\unit}[1]{\,\left[\mathrm{#1}\right]}
 
 \begin{document}
   \maketitle
   \newpage
-  \section{Kinematyka}
-    \subsection{Wektory}
-      \subsubsection{Iloczyn skalarny}
+  \chapter{Kinematyka}
+    \section{Wektory}
+      \subsection{Iloczyn skalarny}
         \begin{gather}
           c = \vec a \cdot \vec b\\
           c = |\vec a|\cdot |\vec b|\cdot\cos\measuredangle(\vec a, \vec b)
         \end{gather}
-      \subsubsection{Iloczyn wektorowy}
+      \subsection{Iloczyn wektorowy}
         \begin{gather}
           \vec c = \vec a \times \vec b\\
           \vec c = |\vec a|\cdot |\vec b|\cdot\sin\measuredangle(\vec a, \vec b)
         \end{gather}
-    \subsection{Opis ruchu}
+    \section{Opis ruchu}
       \begin{equation}
         v_{\acute sr} = \frac st \unit{\frac ms}
       \end{equation}
@@ -36,7 +36,7 @@
       \begin{equation}
         \vec a = \frac{\Delta\vec v}{\Delta t} \unit{\frac{m}{s^2}}
       \end{equation}
-    \subsection{Ruch jednostajny prostoliniowy}
+    \section{Ruch jednostajny prostoliniowy}
       \begin{equation}
         v = const.
       \end{equation}
@@ -49,7 +49,7 @@
       \begin{equation}
         x(t) = x_0 \pm vt
       \end{equation}
-    \subsection{Ruch jednostajnie przyśpieszony}
+    \section{Ruch jednostajnie przyśpieszony}
       \begin{gather}
         a = \frac{\Delta v}{\Delta t} \unit{\frac{m}{s^2}}\\
         a = const.
@@ -67,7 +67,7 @@
       \begin{equation}
         s_1:s_2:s_3:s_4:s_5:\cdots = 1:3:5:7:9:\cdots
       \end{equation}
-    \subsection{Ruch jednostajnie opóźniony}
+    \section{Ruch jednostajnie opóźniony}
       jeżeli $v_k = 0$:
       \begin{gather}
         v_0 = at\\
@@ -78,13 +78,13 @@
         v_k = v_0 - at\\
         s = v_0t - \frac{at^2}{2} = v_0t - \frac{1}{2}\Delta vt
       \end{gather}
-    \subsection{Rzut pionowy}
-      \subsubsection{Wznoszenie się}
+    \section{Rzut pionowy}
+      \subsection{Wznoszenie się}
         \begin{gather}
           h = v_0t - \frac{gt^2}{2}\\
           v = v_0 - gt
         \end{gather}
-      \subsubsection{Opadanie}
+      \subsection{Opadanie}
         \begin{gather}
           h = v_0t + \frac{gt^2}{2}\\
           v = v_0 + gt
@@ -93,35 +93,35 @@
         \begin{equation}
           v = gt
         \end{equation}
-    \subsection{Rzut poziomy}
+    \section{Rzut poziomy}
       \begin{gather}
         h = \frac{gt^2}{2}\\
         x = v_0t = v_0\sqrt{\frac{2h}{g}}\\
         v = \sqrt{v_0^2 + v_y^2} = \sqrt{v_0^2 + (gt)^2}
       \end{gather}
-    \subsection{Rzut ukośny}
-      \begin{center}
-        \begin{tikzpicture}
-          \draw[gray, very thin] (0, 0) grid (9.8, 3.8);
-          \draw[->, thin] (-0.3, 0) -- (10, 0) node[below] {$x$};
-          \draw[->, thin] (0, -0.3) -- (0, 4) node[left] {$y$};
-          \draw (4, 3) parabola (0, 0);
-          \draw (4, 3) parabola (8, 0);
-
-          \draw[->, thick] (0, 0) -- (0.8, 0) node[midway, below] {$\vec v_{0_x}$};
-          \draw[->, thick] (0, 0) -- (0, 1) node[midway, left] {$\vec v_{0_y}$};
-          \draw[->, thick] (0, 0) -- (0.8, 1) node[midway, above, xshift=-1] {$\vec v_0$};
-          \draw (0.6, 0) arc (0:50:0.6) node[below, xshift=-0.8, yshift=-2.5] {$\alpha$};
-
-          \draw[->, thick] (4, 3) -- (4.8, 3) node[midway, below] {$\vec v_{0_x}$};
-
-          \draw[->, thick] (8, 0) -- (8.8, 0) node[midway, above] {$\vec v_{0_x}$};
-          \draw[->, thick] (8, 0) -- (8, -1) node[midway, left] {$\vec v_y$};
-          \draw[->, thick] (8, 0) -- (8.8, -1) node[midway, right] {$\vec v$};
-
-          \draw[dotted, thick] (4, 0) -- (4, 3) node[midway, right] {$h_{max}$};
-        \end{tikzpicture}
-      \end{center}
+    \section{Rzut ukośny}
+      % \begin{center}
+      %   \begin{tikzpicture}
+      %     \draw[gray, very thin] (0, 0) grid (9.8, 3.8);
+      %     \draw[->, thin] (-0.3, 0) -- (10, 0) node[below] {$x$};
+      %     \draw[->, thin] (0, -0.3) -- (0, 4) node[left] {$y$};
+      %     \draw (4, 3) parabola (0, 0);
+      %     \draw (4, 3) parabola (8, 0);
+      %
+      %     \draw[->, thick] (0, 0) -- (0.8, 0) node[midway, below] {$\vec v_{0_x}$};
+      %     \draw[->, thick] (0, 0) -- (0, 1) node[midway, left] {$\vec v_{0_y}$};
+      %     \draw[->, thick] (0, 0) -- (0.8, 1) node[midway, above, xshift=-1] {$\vec v_0$};
+      %     \draw (0.6, 0) arc (0:50:0.6) node[below, xshift=-0.8, yshift=-2.5] {$\alpha$};
+      %
+      %     \draw[->, thick] (4, 3) -- (4.8, 3) node[midway, below] {$\vec v_{0_x}$};
+      %
+      %     \draw[->, thick] (8, 0) -- (8.8, 0) node[midway, above] {$\vec v_{0_x}$};
+      %     \draw[->, thick] (8, 0) -- (8, -1) node[midway, left] {$\vec v_y$};
+      %     \draw[->, thick] (8, 0) -- (8.8, -1) node[midway, right] {$\vec v$};
+      %
+      %     \draw[dotted, thick] (4, 0) -- (4, 3) node[midway, right] {$h_{max}$};
+      %   \end{tikzpicture}
+      % \end{center}
       \begin{align}
         v_{0_x} &= v_0\cos\alpha\\
         v_{0_y} &= v_0\sin\alpha
@@ -138,7 +138,7 @@
       \begin{equation}
         z_{max} = \frac{v_0^2}{2g}
       \end{equation}
-    \subsection{Ruch jednostajny po okręgu}
+    \section{Ruch jednostajny po okręgu}
       \begin{equation}
         \alpha = \frac Lr \unit{rad}
       \end{equation}
@@ -163,68 +163,68 @@
       \begin{equation}
         v = \omega r
       \end{equation}
-    \subsection{przyśpieszenie w ruchu po okręgu}
+    \section{przyśpieszenie w ruchu po okręgu}
       \begin{gather}
         \vec a_s = \frac{\Delta\vec v}{\Delta t}\\
         a_w = \sqrt{a_r^2 + a_s^2}
       \end{gather}
 
   \newpage
-  \section{Dynamika}
-    \subsection{Zasady dynamiki Newtona}
-      \subsubsection{Pierwsza zasada}
+  \chapter{Dynamika}
+    \section{Zasady dynamiki Newtona}
+      \subsection{Pierwsza zasada}
         \begin{equation}
           \vec F_w = 0 \Rightarrow \vec v = 0 \lor \vec v = const.
         \end{equation}
-      \subsubsection{Druga zasada}
+      \subsection{Druga zasada}
         \begin{gather}
           F_w \ne 0 \Rightarrow a = const.\\
           \vec a = \frac{\vec F_w}{m} \Rightarrow \vec F_w = m\vec a \unit{N}
         \end{gather}
-      \subsubsection{Trzecia zasada}
+      \subsection{Trzecia zasada}
         \begin{align}
           \vec F_{AB} &= -\vec F_{BA}\\
           F_{AB} &= F_{BA}
         \end{align}
-    \subsection{Ruch na równi pochyłej}
+    \section{Ruch na równi pochyłej}
       \begin{align}
         \frac{\vec F_Z}{\vec F_g} = \sin\alpha &\Rightarrow \vec F_Z = \vec F_g\sin\alpha = mg\sin\alpha\\
         \frac{\vec F_N}{\vec F_g} = \cos\alpha &\Rightarrow \vec F_N = \vec F_g\cos\alpha = mg\cos\alpha
       \end{align}
-    \subsection{tbd}
-    \subsection{Pęd ciała}
+    \section{tbd}
+    \section{Pęd ciała}
       \begin{equation}
         \vec p = m\vec v \unit{\frac{kg\cdot m}{s}}
       \end{equation}
       \begin{equation}
         \Delta p = F\Delta t
       \end{equation}
-      \subsubsection{Zasada zachowania pędu}
+      \subsection{Zasada zachowania pędu}
         \begin{equation}
           \Delta \vec p = 0 \Leftrightarrow \vec p = const.
         \end{equation}
-      \subsection{Środek masy}
+      \section{Środek masy}
         \begin{equation}
           x_c = \frac{m_1x_1+m_2x_2+\cdots+m_nx_n}{m_1+m_2+\cdots+m_n} =
           \frac{\sum\limits_{i=1}^n m_ix_i}{\sum\limits_{i=1}^n m_i}
         \end{equation}
-      \subsection{Tarcie}
+      \section{Tarcie}
         \begin{align}
           T_s &= \mu_sF_N \unit{N}\\
           T_k &\leqslant \mu_kF_N \unit{N}
         \end{align}
-      \subsection{Siła dośrodkowa}
+      \section{Siła dośrodkowa}
         \begin{equation}
           F_{do} = \frac{mv^2}{r} \unit{N}
         \end{equation}
-        \subsection{Siła bezwładności}
+        \section{Siła bezwładności}
         \begin{equation}
           \vec F_b = -m\vec a \unit{N}
         \end{equation}
 
   \newpage
-  \section{Praca, moc, energia}
-    \subsection{Praca}
+  \chapter{Praca, moc, energia}
+    \section{Praca}
       \begin{gather}
         W = \vec F\Delta\vec r \unit{J}\\
         W = F\Delta r \cos\measuredangle(\vec F, \Delta\vec r)
@@ -237,7 +237,7 @@
       \begin{equation}
         W = 0
       \end{equation}
-    \subsection{Moc}
+    \section{Moc}
       \begin{equation}
         P = \frac{W}{t} \unit{W}
       \end{equation}
@@ -245,24 +245,24 @@
       \begin{equation}
         P = Fs
       \end{equation}
-    \subsection{Energia mechaniczna}
-      \subsubsection{Energia kinetyczna}
+    \section{Energia mechaniczna}
+      \subsection{Energia kinetyczna}
         \begin{align}
           &E_k = \frac{mv^2}{2} \unit{J}\\
           &\Delta E_k = W
         \end{align}
-      \subsubsection{Energia potencjalna}
+      \subsection{Energia potencjalna}
         \begin{align}
           &E_p = mgh \unit{J}\\
           &\Delta E_p = W
         \end{align}
-      \subsubsection{Zasada zachowania energii}
+      \subsection{Zasada zachowania energii}
         \begin{align}
           &E_c = E_k + E_p\\
           &E_c = const. \Rightarrow \Delta E_c = 0\\
           &\Delta E_c = \Delta E_p + \Delta E_k
         \end{align}
-    \subsection{Sprawność}
+    \section{Sprawność}
       \begin{equation}
         \eta = \frac{E_{u\dot{z}yt.}}{E_{pob.}}\: (\cdot 100\%) = \frac{W_{u\dot{z}yt.}}{E_{pob.}}\: (\cdot 100\%)
       \end{equation}
@@ -271,9 +271,9 @@
       \end{equation}
 
   \newpage
-  \section{Hydrostatyka}
-    \subsection{Ciśnienie i parcie}
-      \subsubsection{Ciśnienie}
+  \chapter{Hydrostatyka}
+    \section{Ciśnienie i parcie}
+      \subsection{Ciśnienie}
         \begin{equation}
           p = \frac{F_N}{S} \unit{Pa}
         \end{equation}
@@ -281,28 +281,28 @@
         \begin{equation}
           p = \frac{mg}{S}
         \end{equation}
-      \subsubsection{Parcie}
+      \subsection{Parcie}
         \begin{equation}
           P = pS \unit{N}
         \end{equation}
-      \subsubsection{Ciśnienie hydrostatyczne}
+      \subsection{Ciśnienie hydrostatyczne}
         \begin{equation}
           p_h = \frac{P}{S} = \varrho_cgh \unit{Pa}
         \end{equation}
-      \subsubsection{Paradoks hydrostatyczny}
-    \subsection{Prawo Pascala}
+      \subsection{Paradoks hydrostatyczny}
+    \section{Prawo Pascala}
       \begin{equation}
         p_1 = p_2 \Rightarrow \frac{F_1}{S_1} = \frac{F_2}{S_2}
       \end{equation}
-      \subsubsection{Naczynia połączone}
+      \subsection{Naczynia połączone}
         \begin{equation}
           p_1 = p_2 \Rightarrow \varrho_1h_1 = \varrho_2h_2
         \end{equation}
-    \subsection{Prawo Archimedesa}
+    \section{Prawo Archimedesa}
       \begin{equation}
         F_W = P_2 - P_1 = \varrho_cgV_z \unit{N}
       \end{equation}
-      \subsubsection{Warunki wypływania}
+      \subsection{Warunki wypływania}
         \begin{align*}
           F_W > F_g &\Rightarrow \text{ciało wypływa}\\
           F_W = F_g &\Rightarrow \text{ciało pływa}\\
@@ -310,17 +310,17 @@
         \end{align*}
 
   \newpage
-  \section{Bryła sztywna}
-    \subsection{Ruch obrotowy}
-      \subsubsection{Prędkość kątowa}
+  \chapter{Bryła sztywna}
+    \section{Ruch obrotowy}
+      \subsection{Prędkość kątowa}
         \begin{equation}
           \omega = \frac{\Delta\alpha}{\Delta t} \unit{\frac{rad}{s},\;\frac{1}{s}}
         \end{equation}
-      \subsubsection{przyśpieszenie kątowe}
+      \subsection{przyśpieszenie kątowe}
         \begin{equation}
           \varepsilon = \frac{\Delta\omega}{\Delta t} \unit{\frac{rad}{s^2},\;\frac{1}{s^2}}
         \end{equation}
-      \subsubsection{Prędkość liniowa (styczna)}
+      \subsection{Prędkość liniowa (styczna)}
         \begin{gather}
           \vec v = \vec\omega \times \vec r\unit{\frac{m}{s}}\\
           v = \omega r\sin\measuredangle(\vec\omega, \vec r)
@@ -329,11 +329,11 @@
         \begin{equation}
           v =\omega r
         \end{equation}
-      \subsubsection{przyśpieszenie liniowe}
+      \subsection{przyśpieszenie liniowe}
         \begin{equation}
           a_r = \varepsilon r \unit{\frac{m}{s^2}}
         \end{equation}
-      \subsection{Równania obrotu}
+      \section{Równania obrotu}
         \begin{gather}
           \omega = \omega_0 \pm \varepsilon t\\
           \alpha = \omega_0t \pm \frac{\varepsilon t^2}{2}\\
@@ -342,25 +342,25 @@
         \begin{equation}
           \alpha = \frac{1}{2} \omega t
         \end{equation}
-    \subsection{Moment bezwładności}
+    \section{Moment bezwładności}
       \begin{equation}
         I = \sum_{i=1}^n m_ir_i^2 \unit{kg\cdot m^2}
       \end{equation}
-        \subsubsection{Momenty bezwładności wybranych brył}
+        \subsection{Momenty bezwładności wybranych brył}
         kula: $I_0 = \frac{2}{5}mr^2$\\
         walec: $I_0 = \frac{1}{2}mr^2$\\
         pręt: $I_0 = \frac{1}{12}ml^2$\\
         rura grubościenna: $I_0 = \frac{1}{2}m(r_1^2 + r_2^2)$
-      \subsubsection{Twierdzenie Steinera}
+      \subsection{Twierdzenie Steinera}
         \begin{equation}
           I = I_0 +mx^2
         \end{equation}
-    \subsection{Energia kinetyczna}
+    \section{Energia kinetyczna}
       \begin{gather}
         E_{k_o} = \sum_{i=1}^n \frac{m_iv_i}{2} \unit{J}\\
         E_{k_o} = \frac{I\omega^2}{2}
       \end{gather}
-    \subsection{Moment siły}
+    \section{Moment siły}
       \begin{gather}
         \vec M = \vec r\times\vec F \unit{N\cdot m}\\
         M = rF\sin\measuredangle(\vec r, \vec F)
@@ -373,17 +373,17 @@
       \begin{equation}
         M = 0
       \end{equation}
-      \subsubsection{Wypadkowy moment siły}
+      \subsection{Wypadkowy moment siły}
         \begin{gather}
           M_w = \sum_{i=1}^n M_i\\
           M_w = \varepsilon I
         \end{gather}
-      \subsubsection{Równowaga bryły sztywnej}
+      \subsection{Równowaga bryły sztywnej}
         \begin{gather}
           F_w = 0\\
           M_w = 0
         \end{gather}
-    \subsection{Moment pędu}
+    \section{Moment pędu}
       \begin{gather}
         \vec L = \vec r \times\vec p \unit{\frac{kg\cdot m^2}{s}}\\
         L = rp\sin\measuredangle(\vec r,\vec p)\\
@@ -402,19 +402,19 @@
       \end{equation}
 
   \newpage
-  \section{Grawitacja}
-    \subsection{Prawa Keplera}
-      \subsubsection{Pierwsze prawo}
-      \subsubsection{Drugie prawo}
+  \chapter{Grawitacja}
+    \section{Prawa Keplera}
+      \subsection{Pierwsze prawo}
+      \subsection{Drugie prawo}
         \begin{align}
           s_1 &= s_2\\
           L_1 = L_2 &\Rightarrow r_1v_1 = r_2v_2
         \end{align}
-      \subsubsection{Trzecie prawo}
+      \subsection{Trzecie prawo}
         \begin{equation}
           \frac{T^2}{r^3} = const.
         \end{equation}
-    \subsection{Prawo powszechnego ciążenia}
+    \section{Prawo powszechnego ciążenia}
       \begin{equation}
         F = G\frac{m_1m_2}{r^2} \unit{N}
       \end{equation}
@@ -426,7 +426,7 @@
         F = \frac{4}{3}\pi RGdm\\
         F \sim dR
       \end{gather}
-    \subsection{Natężenie pola grawitacyjnego}
+    \section{Natężenie pola grawitacyjnego}
       \begin{equation}
         \vec\gamma = \frac{\vec F_g}{m} \unit{\frac{N}{kg},\;\frac{m}{s^2}}
       \end{equation}
@@ -434,7 +434,7 @@
       \begin{equation}
         \gamma = \frac{GM}{r^2}
       \end{equation}
-    \subsection{Praca w polu grawitacyjnym}
+    \section{Praca w polu grawitacyjnym}
       \begin{gather}
         W = mgh\\
         \Delta E_p = W
@@ -443,31 +443,31 @@
         W_{Z_{(A\rightarrow B)}} = GMm\left(\frac{1}{r_A} - \frac{1}{r_B}\right)\\
         W_{g_{(A\rightarrow B)}} = -W_{Z_{(A\rightarrow B)}}
       \end{gather}
-    \subsection{Energia w polu grawitacyjnym}
+    \section{Energia w polu grawitacyjnym}
       \begin{equation}
         E_p = -\frac{GMm}{r}
       \end{equation}
-    \subsection{Potencjał pola grawitacyjnego}
+    \section{Potencjał pola grawitacyjnego}
       \begin{gather}
         V = \frac{E_p}{m} \unit{\frac{J}{kg}}\\
         \Delta V = \frac{\Delta E_p}{m}
       \end{gather}
-    \subsection{Prędkości kosmiczne}
-      \subsubsection{Pierwsza prędkość kosmiczna}
+    \section{Prędkości kosmiczne}
+      \subsection{Pierwsza prędkość kosmiczna}
         \begin{equation}
           v_{{}_\mathrm{I}} = \sqrt{\frac{GM}{r}}
         \end{equation}
-      \subsubsection{Satelita geostacjonarny}
+      \subsection{Satelita geostacjonarny}
         \begin{equation}
           r = \sqrt[3]{\frac{GMT^2}{4\pi^4}}
         \end{equation}
-      \subsubsection{Druga prędkość kosmiczna}
+      \subsection{Druga prędkość kosmiczna}
         \begin{equation}
           v_{{}_\mathrm{II}} = \sqrt{\frac{2GM}{r}} = v_{{}_\mathrm{I}}\sqrt{2}
         \end{equation}
 
   \newpage
-  \section{Ruch drgający}
+  \chapter{Ruch drgający}
     \begin{gather}
       F_z = kx\\
       F_s = -kx
@@ -475,12 +475,12 @@
     \begin{equation}
       k = \left|\frac{F_s}{x}\right| \unit{\frac Nm}
     \end{equation}
-    \subsection{Ruch harmoniczny}
+    \section{Ruch harmoniczny}
       \begin{gather}
         x = r\sin\alpha\\
         T = 2\pi\sqrt{\frac mk} \unit{s}
       \end{gather}
-      \subsubsection{Równania ruchu harmonicznego}
+      \subsection{Równania ruchu harmonicznego}
         \begin{align}
           x(t) &= A\sin(\omega t + \varphi_0)\\
           v(t) &= \omega A\cos(\omega t + \varphi_0)\\
@@ -491,7 +491,7 @@
           v_{max} &= \omega A\ \text{dla}\ \cos0^\circ = 1\\
           a_{max} &= -\omega^2A\ \text{dla}\ \sin90^\circ = 1\\
         \end{align}
-      \subsubsection{Łączenie sprężyn}
+      \subsection{Łączenie sprężyn}
         \begin{gather}
           F = const.\\
           x = \sum_{i=1}^n x_i\\
@@ -502,7 +502,7 @@
           F_c = \sum_{i=1}^n F_i\\
           k = \sum_{i=1}^n k_i
         \end{gather}
-    \subsection{Energia w ruchu harmonicznym}
+    \section{Energia w ruchu harmonicznym}
       \begin{equation}
         W = \frac{1}{2}Fx \Rightarrow E_{p_s} = \frac{1}{2}kx^2
       \end{equation}
@@ -511,7 +511,7 @@
         E_c &= \frac{1}{2}kA^2\\
         E_k &= \frac{1}{2}k(A^2 - x^2)
       \end{align}
-    \subsection{Wahadło matematyczne}
+    \section{Wahadło matematyczne}
       \begin{equation}
         F = F_g\sin\alpha
       \end{equation}
@@ -522,20 +522,20 @@
       \end{gather}
 
   \newpage
-  \section{Termodynamika}
-    \subsection{Zerowa zasada dynamiki}
+  \chapter{Termodynamika}
+    \section{Zerowa zasada dynamiki}
       \begin{equation}
         p = \frac{2}{3}\cdot\frac{NE_{k_{\acute sr.}}}{V} \unit{Pa}
-        % N - liczba cząstek gazu
       \end{equation}
+      gdzie $N$ - liczba cząstek gazu
       \begin{equation}
         E_{k_{\acute sr.}} = \frac{1}{2}mv_{\acute sr.}^2 \unit{J}
       \end{equation}
-    \subsection{Równanie gazu doskonałego}
+    \section{Równanie gazu doskonałego}
       \begin{equation}
         \frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2} \Rightarrow \frac{pV}{T} = const.
       \end{equation}
-      \subsubsection{Równanie Clapeyrona}
+      \subsection{Równanie Clapeyrona}
         \begin{equation}
           pV = nRT = NkT
         \end{equation}
@@ -544,40 +544,40 @@
           R =  8,31 \unit{\frac{J}{mol\cdot K}}\\
           k = \frac{R}{N_A} = 1,38\cdot 10^{-23} \unit{\frac{J}{K}}
         \end{gather}
-    \subsection{Przemiany gazu doskonałego}
-      \subsubsection{Przemiana izotermiczna}
+    \section{Przemiany gazu doskonałego}
+      \subsection{Przemiana izotermiczna}
         \begin{gather}
           T = const.\\
           \frac{p_1V_1}{T} = \frac{p_2V_2}{T} \Rightarrow p_1V_1 = p_2V_2\\
           pV = const. \Rightarrow p = \frac{const.}{V}\\
           \text{(Prawo Boyle'a)}
         \end{gather}
-      \subsubsection{Przemiana izochoryczna}
+      \subsection{Przemiana izochoryczna}
         \begin{gather}
           V = const.\\
           \frac{p_1V}{T_1} = \frac{p_2V}{T_2} \Rightarrow \frac{p_1}{T_1} = \frac{p_2}{T_2}\\
           \frac{p}{T} = const. \Rightarrow p = T\cdot const.\\\text{(Prawo Charles'a)}
         \end{gather}
-        \begin{tikzpicture}
-          \draw[->] (-0.3, 0) -- (4, 0) node[below] {$T$};
-          \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
-          \draw[thick] (0.58, 0.5) -- (3.5, 3);
-          \draw[dotted] (0, 0) -- (0.58, 0.5);
-        \end{tikzpicture}
-      \subsubsection{Przemiana izobaryczna}
+        % \begin{tikzpicture}
+        %   \draw[->] (-0.3, 0) -- (4, 0) node[below] {$T$};
+        %   \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
+        %   \draw[thick] (0.58, 0.5) -- (3.5, 3);
+        %   \draw[dotted] (0, 0) -- (0.58, 0.5);
+        % \end{tikzpicture}
+      \subsection{Przemiana izobaryczna}
         \begin{gather}
           p = const.\\
           \frac{pV_1}{T_1} = \frac{pV_2}{T_2} \Rightarrow \frac{V_1}{T_1} = \frac{V_2}{T_2}\\
           \frac{V}{T} = const. \Rightarrow V = T\cdot const.\\
           \text{(Prawo Gay-Lussaca)}
         \end{gather}
-        \begin{tikzpicture}
-          \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
-          \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$T$};
-          \draw[thick] (0.58, 0.5) -- (3.5, 3);
-          \draw[dotted] (0, 0) -- (0.58, 0.5);
-        \end{tikzpicture}
-    \subsection{Pierwsza zasada termodynamiki}
+        % \begin{tikzpicture}
+        %   \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
+        %   \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$T$};
+        %   \draw[thick] (0.58, 0.5) -- (3.5, 3);
+        %   \draw[dotted] (0, 0) -- (0.58, 0.5);
+        % \end{tikzpicture}
+    \section{Pierwsza zasada termodynamiki}
       \begin{equation}
         \Delta U = Q + W_z \unit{J}
       \end{equation}
@@ -598,22 +598,23 @@
       \begin{equation}
         |W| = p|\Delta V|
       \end{equation}
-    \subsection{Energia wewnętrzna gazu doskonałego}
+    \section{Energia wewnętrzna gazu doskonałego}
       \begin{gather}
         U = N\cdot\frac{i}{2}kT\\
         \Delta U = N\cdot\frac{i}{2}k\Delta T
       \end{gather}
-      \subsubsection{Przemiana izotermiczna}
+      gdzie $i$ - stopnie swobody cząstek
+      \subsection{Przemiana izotermiczna}
         \begin{gather}
           T = const. \Leftrightarrow U = const.\\
           \Delta U = 0 \Rightarrow Q + W = 0
         \end{gather}
-      \subsubsection{Przemiana izochoryczna}
+      \subsection{Przemiana izochoryczna}
         \begin{gather}
           V = const. \Rightarrow \Delta V = 0\\
           W = 0 \Rightarrow \Delta U = Q
         \end{gather}
-      \subsubsection{Przemiana adiabatyczna}
+      \subsection{Przemiana adiabatyczna}
         \begin{gather}
           Q = 0 \Rightarrow \Delta U = W\\
           pV^\kappa = const.
@@ -622,13 +623,13 @@
         \begin{equation}
           \kappa = \frac{C_p}{C_V}
         \end{equation}
-    \subsection{Ciepło molowe i właściwe}
-      \subsubsection{Ciepło właściwe}
+    \section{Ciepło molowe i właściwe}
+      \subsection{Ciepło właściwe}
         \begin{gather}
           C_w = \frac{Q}{m\Delta T} \unit{\frac{J}{kg\cdot K}}\\
           Q = mC_w\Delta T
         \end{gather}
-      \subsubsection{Ciepło molowe}
+      \subsection{Ciepło molowe}
         \begin{equation}
           C = \frac{Q}{n\Delta T} \unit{\frac{J}{mol\cdot K}}
         \end{equation}
@@ -638,25 +639,25 @@
           &Q_p = Q_V + p\Delta V\\
           &C_p = C_V + R
         \end{align}
-    \subsection{Energia wewnętrzna jako funkcja stanu}
+    \section{Energia wewnętrzna jako funkcja stanu}
       \begin{equation}
         \Delta U = Q_V = nC_V\Delta T
       \end{equation}
-      \subsection{Silnik cieplny}
-        \begin{center}
-          \begin{tikzpicture}[scale=1.5]
-            \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
-            \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
-            \draw[thick, ->] (1, 3) -- (2.5, 2.6);
-            \draw[thick, ->] (2.5, 2.6) -- (3, 1);
-            \draw[thick, <-] (1, 3) arc (180:270:2);
-            \draw (2.05, 2.05) node {\LARGE $W$};
-          \end{tikzpicture}
-        \end{center}
+      \section{Silnik cieplny}
+        % \begin{center}
+        %   \begin{tikzpicture}[scale=1.5]
+        %     \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
+        %     \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
+        %     \draw[thick, ->] (1, 3) -- (2.5, 2.6);
+        %     \draw[thick, ->] (2.5, 2.6) -- (3, 1);
+        %     \draw[thick, <-] (1, 3) arc (180:270:2);
+        %     \draw (2.05, 2.05) node {\LARGE $W$};
+        %   \end{tikzpicture}
+        % \end{center}
       \begin{equation}
         \eta = \frac{|Q_1|-|Q_2|}{Q_1} = \frac{T_1 - T_2}{T_1}
       \end{equation}
-    \subsection{Przejścia fazowe}
+    \section{Przejścia fazowe}
       \begin{equation}
         Q = mC_w\Delta T
       \end{equation}
@@ -668,24 +669,24 @@
       \begin{equation}
         Q = mR
       \end{equation}
-    \subsection{Rozszerzalność temperaturowa ciał}
-      \subsubsection{Rozszerzalność obiętościowa}
+    \section{Rozszerzalność temperaturowa ciał}
+      \subsection{Rozszerzalność obiętościowa}
         \begin{equation}
           \Delta V = V_0\alpha\Delta T
         \end{equation}
-      \subsubsection{Rozszerzalność liniowa}
+      \subsection{Rozszerzalność liniowa}
         \begin{equation}
           \Delta l = l_0\lambda\Delta T
         \end{equation}
 
   \newpage
-  \section{Elektrostatyka}
-    \subsection{Ładunek}
+  \chapter{Elektrostatyka}
+    \section{Ładunek}
       \begin{gather}
         e = 1,6\cdot 10^{-19} \unit{C}\\
         q = ne \unit{C}
       \end{gather}
-    \subsection{Prawo Culomba}
+    \section{Prawo Culomba}
       \begin{equation}
         F = k\frac{q_1q_2}{r^2} \unit{N}
       \end{equation}
@@ -694,31 +695,33 @@
         k = \frac{1}{4\pi\varepsilon_0} \approx 8,99\cdot 10^9 \unit{\frac{N\cdot m^2}{C^2}}\\
         \varepsilon_0 = 8,85\cdot 10^{-12} \unit{\frac{C^2}{N\cdot m^2}}
       \end{gather}
-    \subsection{Natężenie pola elektrostatycznego}
+    \section{Natężenie pola elektrostatycznego}
       \begin{gather}
         \vec E = \frac{\vec F}{q} \unit{\frac{N}{C}}\\
         E = \frac{k|Q|}{r^2}
       \end{gather}
-    \subsection{Rozmieszczenie ładunku na przewodniku}
+    \section{Rozmieszczenie ładunku na przewodniku}
       \begin{equation}
         \sigma = \frac{Q}{S} \unit{\frac{C}{m^2}}
       \end{equation}
-    \subsection{Praca, energia i potencjał w polu elektrostatycznym centralnym}
+    \section{Praca w polu centralnym}
       \begin{equation}
         W_{A\rightarrow B} = -kQq\left(\frac{1}{r_A} - \frac{1}{r_B}\right) \unit{J}
       \end{equation}
+    \section{Energia w polu centralnym}
       \begin{equation}
         E_p = \frac{kQq}{r} \unit{J}
       \end{equation}
+    \section{Potencjał w polu centralnym}
       \begin{gather}
         V = \frac{E_p}{q} = \frac{kQ}{r} \unit{V}\\
         W = q\Delta V = qU
       \end{gather}
-    \subsection{Pojemność elektryczna przewodnika}
+    \section{Pojemność elektryczna przewodnika}
       \begin{equation}
         C = \frac{Q}{V} \unit{F}
       \end{equation}
-    \subsection{Kondensator}
+    \section{Kondensator}
       \begin{equation}
         C= \frac{Q}{U}
       \end{equation}
@@ -729,7 +732,7 @@
       \begin{equation}
         E = \frac{U}{d}
       \end{equation}
-      \subsubsection{Łączenie kondensatorów}
+      \subsection{Łączenie kondensatorów}
         \begin{gather}
           Q = const.\\
           U = \sum_{i=1}^n U_i\\
@@ -740,16 +743,16 @@
           Q = \sum_{i=1}^n Q_i\\
           C_z = \sum_{i=1}^n C_i
         \end{gather}
-      \subsubsection{Kondensator z dielektrykiem}
+      \subsection{Kondensator z dielektrykiem}
       \begin{equation}
         C= \frac{\varepsilon_0\varepsilon_rS}{d} \unit{F}
       \end{equation}
       gdzie $\varepsilon_r$ - stała przenikalności dielektryka
-      \subsubsection{Energia naładowaniego kondensatora}
+      \subsection{Energia naładowaniego kondensatora}
         \begin{equation}
           E = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{Q^2}{2C}
         \end{equation}
-    \subsection{Ruch ładunków w polu elektrostatycznym}
+    \section{Ruch ładunków w polu elektrostatycznym}
       \begin{equation}
         F = qE
       \end{equation}
@@ -759,22 +762,22 @@
       \end{equation}
 
   \newpage
-  \section{Prąd elektryczny}
-    \subsection{Natężenie prądu elektrycznego}
+  \chapter{Prąd elektryczny}
+    \section{Natężenie prądu elektrycznego}
       \begin{equation}
         I = \frac{\Delta Q}{\Delta t} \unit{A}
       \end{equation}
-    \subsection{Pierwsze prawo Kirchoffa}
+    \section{Pierwsze prawo Kirchoffa}
       \begin{equation}
         \sum_{i=1}^n I_i = 0
       \end{equation}
-    \subsection{Prawo Ohma}
+    \section{Prawo Ohma}
       \begin{gather}
         \frac{U}{I} = const.\\
         R = \frac{U}{I} \unit{\Omega}
       \end{gather}
-      \subsubsection{Wybrane charakterystyki prądowo-napięciowe}
-      \subsubsection{Łączenie rezystorów}
+      \subsection{Wybrane charakterystyki prądowo-napięciowe}
+      \subsection{Łączenie rezystorów}
         \begin{gather}
           I = const.\\
           U = \sum_{i=1}^n U_i\\
@@ -785,30 +788,30 @@
           I = \sum_{i=1}^n I_i\\
           \frac{1}{R_z} = \sum_{i=1}^n \frac{1}{R_i}
         \end{gather}
-      \subsubsection{Opór przewodnika}
+      \subsection{Opór przewodnika}
         \begin{equation}
           R = \frac{\varrho l}{S} \unit{\Omega}
         \end{equation}
       gdzie $\varrho$ - opór właściwy materiału przewodnika
-    \subsection{Praca prądu elektrycznego}
+    \section{Praca prądu elektrycznego}
       \begin{equation}
         W = UIt = \frac{U^2}{R}t = I^2Rt
       \end{equation}
-      \subsubsection{Emisja ciepła}
+      \subsection{Emisja ciepła}
         \begin{equation}
           Q = W = I^2Rt \quad\text{(Ciepło Joule'a)}
         \end{equation}
-      \subsubsection{Energia elektryczna}
+      \subsection{Energia elektryczna}
         \begin{equation}
           E_{el} = W = UIt \unit{kWh}
         \end{equation}
-    \subsection{Moc prądu elektrycznego}
+    \section{Moc prądu elektrycznego}
       \begin{gather}
         P = \frac{W}{t} \unit{W}\\
         P = UI = I^2R = \frac{U^2}{R}
       \end{gather}
-    \subsection{Ogniwo galwaniczne}
-      \subsubsection{Prawo Ohma dla obwodu}
+    \section{Ogniwo galwaniczne}
+      \subsection{Prawo Ohma dla obwodu}
         \begin{gather}
           \mathcal E = U + U_w = U + IR_w\\
           U = \mathcal E - IR_w
@@ -816,17 +819,17 @@
         \begin{equation}
           I = \frac{\mathcal E}{R_z} = \frac{\mathcal E}{R + R_w} \unit{A}
         \end{equation}
-    \subsection{Drugie prawo Kirchoffa}
+    \section{Drugie prawo Kirchoffa}
       \begin{equation}
         \sum_{i=1}^n \mathcal E_i + \sum_{i=1}^n I_iR_i = 0
       \end{equation}
-    \subsection{Przewodnictwo ciał stałych}
-    \subsection{Dioda półprzewodnikowa}
+    \section{Przewodnictwo ciał stałych}
+    \section{Dioda półprzewodnikowa}
 
   \newpage
-  \section{Magnetyzm}
-    \subsection{Indukcja magnetyczna}
-      \subsubsection{Pole magnetyczne prostoliniowego przewodnika}
+  \chapter{Magnetyzm}
+    \section{Indukcja magnetyczna}
+      \subsection{Pole magnetyczne prostoliniowego przewodnika}
         \begin{equation}
           B = \frac{\mu_0 I}{2\pi r} \unit{T}
         \end{equation}
@@ -834,15 +837,15 @@
         \begin{equation}
           \mu_0 = 4\pi\cdot 10^{-7} \unit{\frac{Tm}{A},\;\frac{N}{A^2}}
         \end{equation}
-      \subsubsection{Pole magnetyczne gęstej zwojnicy}
+      \subsection{Pole magnetyczne gęstej zwojnicy}
         \begin{equation}
           B = \frac{\mu_0 nI}{l} \unit{T}
         \end{equation}
-      \subsubsection{Pole magnetyczne pętli}
+      \subsection{Pole magnetyczne pętli}
         \begin{equation}
           B = \frac{\mu_0 I}{2r} \unit{T}
         \end{equation}
-    \subsection{Siła elektrodynamiczna}
+    \section{Siła elektrodynamiczna}
       \begin{equation}
         F = BI\Delta l\sin\measuredangle(\Delta\vec l, \vec B) \unit{N}
       \end{equation}
@@ -850,5 +853,14 @@
       \begin{equation}
         F = BI\Delta l
       \end{equation}
+  \section{Siła Lorenza}
+    \begin{gather}
+      \vec F_L = q\vec v\times\vec B \unit{N}\\
+      F_L = qvB\sin\measuredangle(\vec v, \vec B)
+    \end{gather}
+    dla $\vec v\perp\vec B$:
+    \begin{equation}
+      F_L = qvB
+    \end{equation}
 
 \end{document}
