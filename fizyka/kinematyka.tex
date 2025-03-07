@@ -1,0 +1,154 @@
+  \chapter{Kinematyka}
+    \section{Wektory}
+      \subsection{Iloczyn skalarny}
+        \begin{gather}
+          c = \vec a \cdot \vec b\\
+          c = |\vec a|\cdot |\vec b|\cdot\cos\measuredangle(\vec a, \vec b)
+        \end{gather}
+      \subsection{Iloczyn wektorowy}
+        \begin{gather}
+          \vec c = \vec a \times \vec b\\
+          \vec c = |\vec a|\cdot |\vec b|\cdot\sin\measuredangle(\vec a, \vec b)
+        \end{gather}
+    \section{Opis ruchu}
+      \begin{equation}
+        v_{\acute sr} = \frac st \unit{\frac ms}
+      \end{equation}
+      \begin{equation}
+        \vec v_{\acute sr} = \frac{\Delta\vec x}{\Delta t} \unit{\frac ms}
+      \end{equation}
+      \begin{equation}
+        \vec a = \frac{\Delta\vec v}{\Delta t} \unit{\frac{m}{s^2}}
+      \end{equation}
+    \section{Ruch jednostajny prostoliniowy}
+      \begin{equation}
+        v = const.
+      \end{equation}
+      \begin{equation}
+        s = vt
+      \end{equation}
+      \begin{equation}
+        \tg\alpha = \frac st = v
+      \end{equation}
+      \begin{equation}
+        x(t) = x_0 \pm vt
+      \end{equation}
+    \section{Ruch jednostajnie przyśpieszony}
+      \begin{gather}
+        a = \frac{\Delta v}{\Delta t} \unit{\frac{m}{s^2}}\\
+        a = const.
+      \end{gather}
+      jeżeli $v_0 = 0$:
+      \begin{gather}
+        v = at\\
+        s = \frac{at^2}{2}
+      \end{gather}
+      jeżeli $v_0 \ne 0$:
+      \begin{gather}
+        v_k = v_0 + at\\
+        s = v_0t + \frac{at^2}{2}
+      \end{gather}
+      \begin{equation}
+        s_1:s_2:s_3:s_4:s_5:\cdots = 1:3:5:7:9:\cdots
+      \end{equation}
+    \section{Ruch jednostajnie opóźniony}
+      jeżeli $v_k = 0$:
+      \begin{gather}
+        v_0 = at\\
+        s = \frac{1}{2}v_0t
+      \end{gather}
+      jeżeli $v_k \ne 0$:
+      \begin{gather}
+        v_k = v_0 - at\\
+        s = v_0t - \frac{at^2}{2} = v_0t - \frac{1}{2}\Delta vt
+      \end{gather}
+    \section{Rzut pionowy}
+      \subsection{Wznoszenie się}
+        \begin{gather}
+          h = v_0t - \frac{gt^2}{2}\\
+          v = v_0 - gt
+        \end{gather}
+      \subsection{Opadanie}
+        \begin{gather}
+          h = v_0t + \frac{gt^2}{2}\\
+          v = v_0 + gt
+        \end{gather}
+        jeżeli $v_0 = 0$:
+        \begin{equation}
+          v = gt
+        \end{equation}
+    \section{Rzut poziomy}
+      \begin{gather}
+        h = \frac{gt^2}{2}\\
+        x = v_0t = v_0\sqrt{\frac{2h}{g}}\\
+        v = \sqrt{v_0^2 + v_y^2} = \sqrt{v_0^2 + (gt)^2}
+      \end{gather}
+    \section{Rzut ukośny}
+      % \begin{center}
+      %   \begin{tikzpicture}
+      %     \draw[gray, very thin] (0, 0) grid (9.8, 3.8);
+      %     \draw[->, thin] (-0.3, 0) -- (10, 0) node[below] {$x$};
+      %     \draw[->, thin] (0, -0.3) -- (0, 4) node[left] {$y$};
+      %     \draw (4, 3) parabola (0, 0);
+      %     \draw (4, 3) parabola (8, 0);
+      %
+      %     \draw[->, thick] (0, 0) -- (0.8, 0) node[midway, below] {$\vec v_{0_x}$};
+      %     \draw[->, thick] (0, 0) -- (0, 1) node[midway, left] {$\vec v_{0_y}$};
+      %     \draw[->, thick] (0, 0) -- (0.8, 1) node[midway, above, xshift=-1] {$\vec v_0$};
+      %     \draw (0.6, 0) arc (0:50:0.6) node[below, xshift=-0.8, yshift=-2.5] {$\alpha$};
+      %
+      %     \draw[->, thick] (4, 3) -- (4.8, 3) node[midway, below] {$\vec v_{0_x}$};
+      %
+      %     \draw[->, thick] (8, 0) -- (8.8, 0) node[midway, above] {$\vec v_{0_x}$};
+      %     \draw[->, thick] (8, 0) -- (8, -1) node[midway, left] {$\vec v_y$};
+      %     \draw[->, thick] (8, 0) -- (8.8, -1) node[midway, right] {$\vec v$};
+      %
+      %     \draw[dotted, thick] (4, 0) -- (4, 3) node[midway, right] {$h_{max}$};
+      %   \end{tikzpicture}
+      % \end{center}
+      \begin{align}
+        v_{0_x} &= v_0\cos\alpha\\
+        v_{0_y} &= v_0\sin\alpha
+      \end{align}
+      \begin{equation}
+        y(x) = x\tg\alpha - x^2\cdot \frac{g}{2v_0^2\cos^2\alpha}
+      \end{equation}
+      \begin{gather}
+        t_c = \frac{2v_0\sin\alpha}{g}\\
+        h_{max} = \frac{v_0^2\sin^2\alpha}{2g}\\
+        z = \frac{v_0^2\sin 2\alpha}{g}
+      \end{gather}
+      dla $\alpha = 45^\circ,\; z = z_{max}$:
+      \begin{equation}
+        z_{max} = \frac{v_0^2}{2g}
+      \end{equation}
+    \section{Ruch jednostajny po okręgu}
+      \begin{equation}
+        \alpha = \frac Lr \unit{rad}
+      \end{equation}
+      \begin{gather}
+        f = \frac nt \unit{Hz}\\
+        \omega = \frac{\Delta\alpha}{\Delta t} \unit{\frac{rad}{s}}
+      \end{gather}
+      dla jednego obrotu:
+      \begin{gather}
+        f = \frac 1T\\
+        \omega = \frac{2\pi}{T}
+      \end{gather}
+      \begin{gather}
+        v = \frac{2\pi r}{T} = 2\pi rf = \omega r\\
+        a_r = \frac{v^2}{r}
+      \end{gather}
+      \begin{gather}
+        \vec v = \vec\omega \times \vec r\\
+        v = \omega r\sin\measuredangle(\vec\omega, \vec r)
+      \end{gather}
+      dla $\vec\omega \perp \vec r$:
+      \begin{equation}
+        v = \omega r
+      \end{equation}
+    \section{przyśpieszenie w ruchu po okręgu}
+      \begin{gather}
+        \vec a_s = \frac{\Delta\vec v}{\Delta t}\\
+        a_w = \sqrt{a_r^2 + a_s^2}
+      \end{gather}

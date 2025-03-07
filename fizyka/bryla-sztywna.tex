@@ -1,0 +1,90 @@
+  \chapter{Bryła sztywna}
+    \section{Ruch obrotowy}
+      \subsection{Prędkość kątowa}
+        \begin{equation}
+          \omega = \frac{\Delta\alpha}{\Delta t} \unit{\frac{rad}{s},\;\frac{1}{s}}
+        \end{equation}
+      \subsection{przyśpieszenie kątowe}
+        \begin{equation}
+          \varepsilon = \frac{\Delta\omega}{\Delta t} \unit{\frac{rad}{s^2},\;\frac{1}{s^2}}
+        \end{equation}
+      \subsection{Prędkość liniowa (styczna)}
+        \begin{gather}
+          \vec v = \vec\omega \times \vec r\unit{\frac{m}{s}}\\
+          v = \omega r\sin\measuredangle(\vec\omega, \vec r)
+        \end{gather}
+        dla $\vec\omega \perp \vec r$:
+        \begin{equation}
+          v =\omega r
+        \end{equation}
+      \subsection{przyśpieszenie liniowe}
+        \begin{equation}
+          a_r = \varepsilon r \unit{\frac{m}{s^2}}
+        \end{equation}
+      \section{Równania obrotu}
+        \begin{gather}
+          \omega = \omega_0 \pm \varepsilon t\\
+          \alpha = \omega_0t \pm \frac{\varepsilon t^2}{2}\\
+        \end{gather}
+        dla $\omega_0 = 0$:
+        \begin{equation}
+          \alpha = \frac{1}{2} \omega t
+        \end{equation}
+    \section{Moment bezwładności}
+      \begin{equation}
+        I = \sum_{i=1}^n m_ir_i^2 \unit{kg\cdot m^2}
+      \end{equation}
+        \subsection{Momenty bezwładności wybranych brył}
+        kula: $I_0 = \frac{2}{5}mr^2$\\
+        walec: $I_0 = \frac{1}{2}mr^2$\\
+        pręt: $I_0 = \frac{1}{12}ml^2$\\
+        rura grubościenna: $I_0 = \frac{1}{2}m(r_1^2 + r_2^2)$
+      \subsection{Twierdzenie Steinera}
+        \begin{equation}
+          I = I_0 +mx^2
+        \end{equation}
+    \section{Energia kinetyczna}
+      \begin{gather}
+        E_{k_o} = \sum_{i=1}^n \frac{m_iv_i}{2} \unit{J}\\
+        E_{k_o} = \frac{I\omega^2}{2}
+      \end{gather}
+    \section{Moment siły}
+      \begin{gather}
+        \vec M = \vec r\times\vec F \unit{N\cdot m}\\
+        M = rF\sin\measuredangle(\vec r, \vec F)
+      \end{gather}
+      dla $\vec r \perp \vec F$:
+      \begin{equation}
+        M = rF
+      \end{equation}
+      dla $\vec r \parallel \vec F$:
+      \begin{equation}
+        M = 0
+      \end{equation}
+      \subsection{Wypadkowy moment siły}
+        \begin{gather}
+          M_w = \sum_{i=1}^n M_i\\
+          M_w = \varepsilon I
+        \end{gather}
+      \subsection{Równowaga bryły sztywnej}
+        \begin{gather}
+          F_w = 0\\
+          M_w = 0
+        \end{gather}
+    \section{Moment pędu}
+      \begin{gather}
+        \vec L = \vec r \times\vec p \unit{\frac{kg\cdot m^2}{s}}\\
+        L = rp\sin\measuredangle(\vec r,\vec p)\\
+        L = mrv\sin\measuredangle(\vec r,\vec v)
+      \end{gather}
+      dla $\vec p \perp \vec r$:
+      \begin{equation}
+        L = rp = mrv
+      \end{equation}
+      \begin{equation}
+        L = \sum_{i=1}^n m_ir_iv_i\sin\measuredangle(\vec r,\vec v)
+      \end{equation}
+      dla $\vec r \perp \vec v$:
+      \begin{equation}
+        L = \omega I
+      \end{equation}
