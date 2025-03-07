@@ -5,15 +5,15 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
 \usepackage{amsmath, amssymb, tikz}
 
-\numberwithin{equation}{chapter}
 \DeclareMathOperator{\tg}{tg}
 \newcommand{\unit}[1]{\,\left[\mathrm{#1}\right]}
+\renewcommand{\chaptername}{Rozdział}
 
 \begin{document}
   \maketitle
-  \newpage
   \chapter{Kinematyka}
     \section{Wektory}
       \subsection{Iloczyn skalarny}
@@ -169,7 +169,6 @@
         a_w = \sqrt{a_r^2 + a_s^2}
       \end{gather}
 
-  \newpage
   \chapter{Dynamika}
     \section{Zasady dynamiki Newtona}
       \subsection{Pierwsza zasada}
@@ -222,7 +221,6 @@
           \vec F_b = -m\vec a \unit{N}
         \end{equation}
 
-  \newpage
   \chapter{Praca, moc, energia}
     \section{Praca}
       \begin{gather}
@@ -270,7 +268,6 @@
         \eta_{u\dot{z}yt.} = \prod_{i=1}^n \eta_i
       \end{equation}
 
-  \newpage
   \chapter{Hydrostatyka}
     \section{Ciśnienie i parcie}
       \subsection{Ciśnienie}
@@ -309,7 +306,6 @@
           F_W < F_g &\Rightarrow \text{ciało tonie}
         \end{align*}
 
-  \newpage
   \chapter{Bryła sztywna}
     \section{Ruch obrotowy}
       \subsection{Prędkość kątowa}
@@ -401,7 +397,6 @@
         L = \omega I
       \end{equation}
 
-  \newpage
   \chapter{Grawitacja}
     \section{Prawa Keplera}
       \subsection{Pierwsze prawo}
@@ -466,7 +461,6 @@
           v_{{}_\mathrm{II}} = \sqrt{\frac{2GM}{r}} = v_{{}_\mathrm{I}}\sqrt{2}
         \end{equation}
 
-  \newpage
   \chapter{Ruch drgający}
     \begin{gather}
       F_z = kx\\
@@ -521,7 +515,6 @@
         T = 2\pi\sqrt{\frac lg}
       \end{gather}
 
-  \newpage
   \chapter{Termodynamika}
     \section{Zerowa zasada dynamiki}
       \begin{equation}
@@ -679,7 +672,6 @@
           \Delta l = l_0\lambda\Delta T
         \end{equation}
 
-  \newpage
   \chapter{Elektrostatyka}
     \section{Ładunek}
       \begin{gather}
@@ -761,7 +753,6 @@
         a = \frac{qE}{m} = \frac{qU}{md} \unit{\frac{m}{s^2}}
       \end{equation}
 
-  \newpage
   \chapter{Prąd elektryczny}
     \section{Natężenie prądu elektrycznego}
       \begin{equation}
@@ -826,7 +817,6 @@
     \section{Przewodnictwo ciał stałych}
     \section{Dioda półprzewodnikowa}
 
-  \newpage
   \chapter{Magnetyzm}
     \section{Indukcja magnetyczna}
       \subsection{Pole magnetyczne prostoliniowego przewodnika}
