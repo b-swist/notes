@@ -6,11 +6,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
-\usepackage{amsmath, amssymb, tikz}
+\usepackage{amsmath, amssymb, amsthm, tikz}
 
 \DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\const}{const.}
 \newcommand{\unit}[1]{\,\left[\mathrm{#1}\right]}
+\newcommand{\tab}{\hspace*{3mm}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
 \renewcommand{\chaptername}{Rozdział}
+
+\newtheoremstyle{colon}{\topsep}{\topsep}{\itshape}{}{\bfseries}{:}{5pt plus 1pt minus 1pt}{}
+\theoremstyle{colon}
+\newtheorem*{inner}{\innerheader}
+\newcommand{\innerheader}{}
+\newenvironment{law}[1]{\renewcommand\innerheader{#1}\begin{inner}}{\end{inner}}
+\theoremstyle{definition}
+\newtheorem*{definition}{Definicja}
 
 \begin{document}
   \maketitle

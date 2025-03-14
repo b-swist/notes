@@ -1,80 +1,80 @@
-  \chapter{Elektrostatyka}
-    \section{Ładunek}
+\chapter{Elektrostatyka}
+  \section{Ładunek}
+    \begin{gather}
+      e = 1,6\cdot 10^{-19} \unit{C}\\
+      q = ne \unit{C}
+    \end{gather}
+  \section{Prawo Culomba}
+    \begin{equation}
+      F = k\frac{q_1q_2}{r^2} \unit{N}
+    \end{equation}
+    gdzie:
+    \begin{gather}
+      k = \frac{1}{4\pi\varepsilon_0} \approx 8,99\cdot 10^9 \unit{\frac{N\cdot m^2}{C^2}}\\
+      \varepsilon_0 = 8,85\cdot 10^{-12} \unit{\frac{C^2}{N\cdot m^2}}
+    \end{gather}
+  \section{Natężenie pola elektrostatycznego}
+    \begin{gather}
+      \vec E = \frac{\vec F}{q} \unit{\frac{N}{C}}\\
+      E = \frac{k|Q|}{r^2}
+    \end{gather}
+  \section{Rozmieszczenie ładunku na przewodniku}
+    \begin{equation}
+      \sigma = \frac{Q}{S} \unit{\frac{C}{m^2}}
+    \end{equation}
+  \section{Praca w polu centralnym}
+    \begin{equation}
+      W_{A\rightarrow B} = -kQq\left(\frac{1}{r_A} - \frac{1}{r_B}\right) \unit{J}
+    \end{equation}
+  \section{Energia w polu centralnym}
+    \begin{equation}
+      E_p = \frac{kQq}{r} \unit{J}
+    \end{equation}
+  \section{Potencjał w polu centralnym}
+    \begin{gather}
+      V = \frac{E_p}{q} = \frac{kQ}{r} \unit{V}\\
+      W = q\Delta V = qU
+    \end{gather}
+  \section{Pojemność elektryczna przewodnika}
+    \begin{equation}
+      C = \frac{Q}{V} \unit{F}
+    \end{equation}
+  \section{Kondensator}
+    \begin{equation}
+      C= \frac{Q}{U}
+    \end{equation}
+    dla kondensatora płaskiego:
+    \begin{equation}
+      C= \frac{\varepsilon_0S}{d}
+    \end{equation}
+    \begin{equation}
+      E = \frac{U}{d}
+    \end{equation}
+    \subsection{Łączenie kondensatorów}
       \begin{gather}
-        e = 1,6\cdot 10^{-19} \unit{C}\\
-        q = ne \unit{C}
+        Q = \const\\
+        U = \sum_{i=1}^n U_i\\
+        \frac{1}{C_z} = \sum_{i=1}^n \frac{1}{C_i}
       \end{gather}
-    \section{Prawo Culomba}
-      \begin{equation}
-        F = k\frac{q_1q_2}{r^2} \unit{N}
-      \end{equation}
-      gdzie:
       \begin{gather}
-        k = \frac{1}{4\pi\varepsilon_0} \approx 8,99\cdot 10^9 \unit{\frac{N\cdot m^2}{C^2}}\\
-        \varepsilon_0 = 8,85\cdot 10^{-12} \unit{\frac{C^2}{N\cdot m^2}}
+        U = \const\\
+        Q = \sum_{i=1}^n Q_i\\
+        C_z = \sum_{i=1}^n C_i
       \end{gather}
-    \section{Natężenie pola elektrostatycznego}
-      \begin{gather}
-        \vec E = \frac{\vec F}{q} \unit{\frac{N}{C}}\\
-        E = \frac{k|Q|}{r^2}
-      \end{gather}
-    \section{Rozmieszczenie ładunku na przewodniku}
+    \subsection{Kondensator z dielektrykiem}
+    \begin{equation}
+      C= \frac{\varepsilon_0\varepsilon_rS}{d} \unit{F}
+    \end{equation}
+    gdzie $\varepsilon_r$ - stała przenikalności dielektryka
+    \subsection{Energia naładowaniego kondensatora}
       \begin{equation}
-        \sigma = \frac{Q}{S} \unit{\frac{C}{m^2}}
+        E = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{Q^2}{2C}
       \end{equation}
-    \section{Praca w polu centralnym}
-      \begin{equation}
-        W_{A\rightarrow B} = -kQq\left(\frac{1}{r_A} - \frac{1}{r_B}\right) \unit{J}
-      \end{equation}
-    \section{Energia w polu centralnym}
-      \begin{equation}
-        E_p = \frac{kQq}{r} \unit{J}
-      \end{equation}
-    \section{Potencjał w polu centralnym}
-      \begin{gather}
-        V = \frac{E_p}{q} = \frac{kQ}{r} \unit{V}\\
-        W = q\Delta V = qU
-      \end{gather}
-    \section{Pojemność elektryczna przewodnika}
-      \begin{equation}
-        C = \frac{Q}{V} \unit{F}
-      \end{equation}
-    \section{Kondensator}
-      \begin{equation}
-        C= \frac{Q}{U}
-      \end{equation}
-      dla kondensatora płaskiego:
-      \begin{equation}
-        C= \frac{\varepsilon_0S}{d}
-      \end{equation}
-      \begin{equation}
-        E = \frac{U}{d}
-      \end{equation}
-      \subsection{Łączenie kondensatorów}
-        \begin{gather}
-          Q = const.\\
-          U = \sum_{i=1}^n U_i\\
-          \frac{1}{C_z} = \sum_{i=1}^n \frac{1}{C_i}
-        \end{gather}
-        \begin{gather}
-          U = const.\\
-          Q = \sum_{i=1}^n Q_i\\
-          C_z = \sum_{i=1}^n C_i
-        \end{gather}
-      \subsection{Kondensator z dielektrykiem}
-      \begin{equation}
-        C= \frac{\varepsilon_0\varepsilon_rS}{d} \unit{F}
-      \end{equation}
-      gdzie $\varepsilon_r$ - stała przenikalności dielektryka
-      \subsection{Energia naładowaniego kondensatora}
-        \begin{equation}
-          E = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{Q^2}{2C}
-        \end{equation}
-    \section{Ruch ładunków w polu elektrostatycznym}
-      \begin{equation}
-        F = qE
-      \end{equation}
-      jeżeli $F = F_w$:
-      \begin{equation}
-        a = \frac{qE}{m} = \frac{qU}{md} \unit{\frac{m}{s^2}}
-      \end{equation}
+  \section{Ruch ładunków w polu elektrostatycznym}
+    \begin{equation}
+      F = qE
+    \end{equation}
+    jeżeli $F = F_w$:
+    \begin{equation}
+      a = \frac{qE}{m} = \frac{qU}{md} \unit{\frac{m}{s^2}}
+    \end{equation}
