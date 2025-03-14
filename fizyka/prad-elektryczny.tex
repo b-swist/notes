@@ -1,63 +1,118 @@
-  \chapter{Prąd elektryczny}
-    \section{Natężenie prądu elektrycznego}
+\chapter{Prąd elektryczny}
+  \begin{definition}
+    \bi{Prąd elektryczny} to~uporządkowany ruch ładunków eletrycznych, których nośnikami w~metalach są \textbf{elektrony}.
+  \end{definition}
+  \begin{definition}
+    \bi{Napięcie elektryczne} to różnica potencjałów między dwoma pun\-ktami obwodu elektrycznego powodująca przepływ ładunków.
+    \begin{equation}
+      U = \Delta V \unit{V}
+    \end{equation}
+  \end{definition}
+  \begin{definition}
+    \bi{Natężenie prądu elektrycznego} to stosunek ilości ładunków \sloppy przepływających przez przekrój poprzeczny przewodu do~czasu, w~którym ten ładunek przepłynął.
+    \begin{equation}
+      I = \frac{\Delta Q}{\Delta t} \unit{A}
+    \end{equation}
+  \end{definition}
+  \section{Prawo Ohma}
+    \begin{law}{Prawo Ohma}
+      Natężenie prądu płynącego przez przewodnik jest wprost proporcjonalne do napięcia pomiędzy końcami tego przewodnika.
       \begin{equation}
-        I = \frac{\Delta Q}{\Delta t} \unit{A}
+        \boxed{R = \frac{U}{I} \unit{\Omega}}
       \end{equation}
-    \section{Pierwsze prawo Kirchoffa}
-      \begin{equation}
-        \sum_{i=1}^n I_i = 0
-      \end{equation}
-    \section{Prawo Ohma}
-      \begin{gather}
-        \frac{U}{I} = const.\\
-        R = \frac{U}{I} \unit{\Omega}
-      \end{gather}
-      \subsection{Wybrane charakterystyki prądowo-napięciowe}
-      \subsection{Łączenie rezystorów}
+    \end{law}
+    \subsection{Łączenie rezystorów}
+      \begin{subequations}
+        \begin{equation*}
+          I = \const
+        \end{equation*}
         \begin{gather}
-          I = const.\\
           U = \sum_{i=1}^n U_i\\
           R_z = \sum_{i=1}^n R_i
         \end{gather}
+      \end{subequations}
+      \begin{subequations}
+        \begin{equation*}
+          U = \const
+        \end{equation*}
         \begin{gather}
-          U = const.\\
           I = \sum_{i=1}^n I_i\\
           \frac{1}{R_z} = \sum_{i=1}^n \frac{1}{R_i}
         \end{gather}
-      \subsection{Opór przewodnika}
+      \end{subequations}
+    \subsection{Opór przewodnika}
+      \begin{definition}
+        \bi{Oporem elektrycznym} nazywamy zdolność ciała do przeciwstawiania się przepływowi prądu elektrycznego.
         \begin{equation}
           R = \frac{\varrho l}{S} \unit{\Omega}
         \end{equation}
-      gdzie $\varrho$ - opór właściwy materiału przewodnika
-    \section{Praca prądu elektrycznego}
+        gdzie:\\
+        \tab $\varrho$ -- opór właściwy materiału przewodnika\\
+        \tab $l$ -- długość przewodu\\
+        \tab $S$ -- pole przekroju przewodnika
+      \end{definition}
+  \section{Praca i moc prądu elektrycznego}
+    Przepływ prądu elektrycznego wiąże się z wykonywaniem przez elektrony pracy.
+    \begin{subequations}
       \begin{equation}
-        W = UIt = \frac{U^2}{R}t = I^2Rt
+        \boxed{W = UIt = \frac{U^2}{R}t = I^2Rt}
       \end{equation}
-      \subsection{Emisja ciepła}
+      \subsection{Emisja ciepła (ciepło Joule'a)}
         \begin{equation}
-          Q = W = I^2Rt \quad\text{(Ciepło Joule'a)}
+            Q = W = I^2Rt\\
         \end{equation}
       \subsection{Energia elektryczna}
         \begin{equation}
-          E_{el} = W = UIt \unit{kWh}
+          \begin{gathered}
+            E_{el} = W = UIt \unit{kWh}\\
+            (1\mathrm{kWh} = 3,6\mathrm{MJ})
+          \end{gathered}
         \end{equation}
-    \section{Moc prądu elektrycznego}
-      \begin{gather}
-        P = \frac{W}{t} \unit{W}\\
-        P = UI = I^2R = \frac{U^2}{R}
-      \end{gather}
-    \section{Ogniwo galwaniczne}
-      \subsection{Prawo Ohma dla obwodu}
+    \end{subequations}
+    \subsection{Moc prądu elektrycznego}
+      \begin{subequations}
         \begin{gather}
-          \mathcal E = U + U_w = U + IR_w\\
-          U = \mathcal E - IR_w
+          P = \frac{W}{t} \unit{W}\\
+          P = UI = I^2R = \frac{U^2}{R}
         \end{gather}
-        \begin{equation}
-          I = \frac{\mathcal E}{R_z} = \frac{\mathcal E}{R + R_w} \unit{A}
-        \end{equation}
-    \section{Drugie prawo Kirchoffa}
-      \begin{equation}
-        \sum_{i=1}^n \mathcal E_i + \sum_{i=1}^n I_iR_i = 0
-      \end{equation}
-    \section{Przewodnictwo ciał stałych}
-    \section{Dioda półprzewodnikowa}
+      \end{subequations}
+  \section{Ogniwo galwaniczne}
+    \begin{definition}
+      \bi{Ogniwo galwaniczne} to elektrolit kwasu, soli lub zasady, w którym zanurzono dwie elektrody wykonane np. z miedzi albo cynku. Na skutek dysocjacji elektrolitycznej między biegunami ogniwa powstaje różnica potencjałów, którą nazywamy \textbf{siłą elektromotoryczną} (SEM).
+    \end{definition}
+    \subsection{Prawo Ohma dla obwodu}
+      \begin{gather}
+        \mathcal E = U + U_w = U + IR_w \unit{V}\\
+        I = \frac{\mathcal E}{R_z} = \frac{\mathcal E}{R + R_w} \unit{A}
+      \end{gather}
+      gdzie:\\
+      \tab $\mathcal E$ -- siła elektromotoryczna\\
+      \tab $R_w$ -- opór wewnętrzny ogniwa
+  \section{Prawa Kirchoffa}
+  \begin{law}{Pierwsze prawo Kirchoffa}
+    Suma natężeń wpływających do węzła obwodu elektrycznego jest równa sumie natężeń wypływających z węzła.
+    \begin{equation}
+      \sum_{i=1}^n I_i = 0
+    \end{equation}
+  \end{law}
+  \begin{law}{Drugie Prawo Kirchoffa}
+    Suma sił elektromotorycznych i spadków napięć w obwodzie zamkniętym (oczku) jest równa zero.
+    \begin{equation}
+      \sum_{i=1}^n \mathcal E_i + \sum_{i=1}^n I_iR_i = 0
+    \end{equation}
+  \end{law}
+  \section{Przewodnictwo ciał stałych}
+    Wyróżnia się trzy grupy ciał stałych ze względu na właściwości elektryczne:
+    \begin{itemize}
+      \item przewodniki
+      \item izolatory
+      \item półprzewodniki
+    \end{itemize}
+
+    \textbf{Przewodnikami} są są przede wszystkim metale takie jak miedź i żelazo. Dobre przewodzą prąd, bo posiadają wolne elektrony. Wraz ze wzrostem temperatury opór elektryczny przewodników wzrasta wskutek drgań sieci krystalicznej, w której poruszają się elektrony.
+
+    \textbf{Izolatory} nie przewodzą prądu elektrycznego lub robią to bardzo słabo z powodu braku wolnych elektronów.
+
+    \textbf{Półprzewodniki} to materiały które mogą wykazywać właściwości zarówno izolatorów, jak i przewodników. Wraz ze wzrostem temperatury ich opór elektryczny maleje, gdyż część elektronów przeskakuje z poziomu podstawowego do poziomu przewodnictwa, stając się nośnikami prądu elektrycznego. Poprzez domieszkowanie półprzewodnika pierwiastkami z grupy 13 bądź 15 układu okresowego uzyskuje się odpowienio \emph{półprzewodnik dziurowy} (typ „p”) oraz \emph{półprzewodnk elektronowy} (typ „n”).
+  \section{Dioda półprzewodnikowa}
+    Dioda półprzewodnikowa jest złożona z dwóch półprzewodników --- jeden typu „p”, a drugi typu „n” --- złączone ze sobą tworząc złączę p-n/n-p. Dioda półprzewodnikowa przepuszcza prąd tylko w jednym kierunku.
