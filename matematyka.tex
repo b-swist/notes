@@ -11,9 +11,9 @@
 
 \newtheorem*{definition}{Definicja}
 \newtheorem{theorem}{Twierdzenie}
-\renewcommand{\chaptername}{Rozdział}
 \DeclareMathOperator{\tg}{tg}
 \DeclareMathOperator{\ctg}{ctg}
+\renewcommand{\chaptername}{Rozdział}
 \setlength{\jot}{6pt}
 \renewcommand{\arraystretch}{1.9}
 
@@ -21,10 +21,79 @@
   \maketitle
 
   \chapter{Geometria}
+    \begin{definition}
+      Symetralna odcinka to prosta prostopadła do odcinka dzieląca go na dwie równe części.
+    \end{definition}
+    \begin{theorem}
+      Symetralna odcinka jest zbiorem punków płaszczyzny równoodległych od końców tego odcinka.
+    \end{theorem}
+    \begin{definition}
+      Dwusieczna kąta to półprosta o początku w wierzchołku kąta dzieląca go na dwa kąty równe.
+    \end{definition}
+    \begin{theorem}
+      Dwusieczną kąta wypukłego jest zbiór punktów równoodległych od ramion tego kąta.
+    \end{theorem}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[thick] (0, 1) -- (6, 1);
+        \draw[thick] (0, 3) -- (6, 3);
+        \draw[thick] (1, 0) -- (5, 4);
+        \draw (1, 2) circle;
+      \end{tikzpicture}
+    \end{center}
+    \begin{gather}
+      \left.
+      \begin{gathered}
+        \alpha_1 = \gamma_1\\
+        \beta_1 = \delta_1\\
+        \alpha_2 = \gamma_2\\
+        \beta_2 = \delta_2
+      \end{gathered}
+      \right\}
+      \begin{gathered}
+        \text{kąty}\\
+        \text{wierzchołkowe}
+      \end{gathered}\\
+      \left.
+      \begin{gathered}
+        \alpha_1 = \alpha_2\\
+        \beta_1 = \beta_2\\
+        \gamma_1 = \gamma_2\\
+        \delta_1 = \delta_2
+      \end{gathered}
+      \right\}
+      \begin{gathered}
+        \text{kąty}\\
+        \text{odpowiadające}
+      \end{gathered}\\
+      \left.
+      \begin{gathered}
+        \alpha_2 = \gamma_1\\
+        \delta_2 = \beta_1
+      \end{gathered}
+      \right\}\;
+      \begin{gathered}
+        \text{kąty naprzemianległe}\\
+        \text{wewnętrzne}
+      \end{gathered}\\
+      \left.
+      \begin{gathered}
+        \alpha_1 = \gamma_2\\
+        \delta_1 = \beta_2
+      \end{gathered}
+      \right\}\;
+      \begin{gathered}
+        \text{kąty naprzemianległe}\\
+        \text{zewnętrzne}
+      \end{gathered}
+    \end{gather}
+    \begin{theorem}[Twierdzenie Talesa]
+      
+    \end{theorem}
     \section{Geometria trójkątów}
     %% TO DO: %%
     % - Podobieństwo
-      \begin{theorem}
+      \begin{theorem}[Twierdzenie Pitagorasa]
         Jeżeli trójkąt jest prostokątny, to kwadrat długości przeciwprostokątnej jest równy sumie kwadratów długości przyprostokątnych.
         \begin{equation}
           c^2 = a^2 + b^2
@@ -39,14 +108,14 @@
           \end{aligned}
         \end{equation}
       \end{theorem}
-      \begin{theorem}
-        W dowolnym trójkącie iloraz długości dowolnego boku i sinusa kąta naprzeciw tego boku jest stały i równy długości średnicy okręgu opisa-\-nego na tym trójkącie.
+      \begin{theorem}[Twierdzenie sinusów]
+        W dowolnym trójkącie iloraz długości dowolnego boku i sinusa kąta naprzeciw tego boku jest stały i równy długości średnicy okręgu opisanego na tym trójkącie.
         \begin{equation}
           \frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R
         \end{equation}
       \end{theorem}
-      \begin{theorem}
-        W dowolnym trójkącie kwadrat boku jest równy różnicy sum kwadratów dwóch pozostałych długości boków oraz iloczynu tych długości i cosinusa kąta zawartego między tymi bokami.
+      \begin{theorem}[Twierdzenie cosinusów]
+        W dowolnym trójkącie kwadrat długości dowolnego boku jest równy różnicy sum kwadratów długości dwóch pozostałych boków oraz iloczynu tych długości i cosinusa kąta zawartego między tymi bokami.
         \begin{equation}
           c^2 = a^2 + b^2 - 2ab\cos\gamma
         \end{equation}
@@ -161,7 +230,7 @@
     \subsection{Kwadrat}
       \begin{center}
         \begin{tikzpicture}
-          \draw[thick] (0, 0) -- (4, 0) node[midway, below]{$a$} -- (4, 4) node[midway, right]{$a$} -- (0, 4) -- (0, 0);
+          \draw[thick] (0, 0) rectangle (4, 4);
           \draw (0, 0) -- (4, 4) node[midway, above left]{$d$};
           \draw (0.5, 0) arc (0:90:0.5);
           \draw (4, 0.5) arc (90:180:0.5);
@@ -177,7 +246,7 @@
     \subsection{Prostokąt}
       \begin{center}
         \begin{tikzpicture}
-          \draw[thick] (0, 0) -- (5, 0) node[midway, below]{$a$} -- (5, 3) node[midway, right]{$b$} -- (0, 3) -- (0, 0);
+          \draw[thick] (0, 0) rectangle (5, 3);
           \draw (0, 0) -- (5, 3) node[midway, above left, xshift=-1, yshift=4]{$d$};
           \draw (0, 3) -- (5, 0);
           \draw (3.05, 1.18) arc (-40:40:0.5) node[midway, left]{$\gamma$};
@@ -320,25 +389,21 @@
         \begin{tikzpicture}
           \draw[thick, ->] (-4, 0) -- (4, 0);
           \draw[thick, ->] (0, -4) -- (0, 4);
-
           \draw[dashed] (1, 3.5) rectangle (3, 0.5);
           \node at (2, 3)[fill=red!30]{$\sin\alpha > 0$};
           \node at (2, 2.33)[fill=red!30]{$\cos\alpha > 0$};
           \node at (2, 1.66)[fill=red!30]{$\ \tg\alpha > 0$};
           \node at (2, 1)[fill=red!30]{$\ctg\alpha > 0$};
-
           \draw[dashed] (-1, 3.5) rectangle (-3, 0.5);
           \node at (-2, 3)[fill=red!30]{$\sin\alpha > 0$};
           \node at (-2, 2.33){$\cos\alpha < 0$};
           \node at (-2, 1.66){$\ \tg\alpha < 0$};
           \node at (-2, 1){$\ctg\alpha < 0$};
-
           \draw[dashed] (-1, -3.5) rectangle (-3, -0.5);
           \node at (-2, -3){$\sin\alpha < 0$};
           \node at (-2, -2.33){$\cos\alpha < 0$};
           \node at (-2, -1.66)[fill=red!30]{$\ \tg\alpha > 0$};
           \node at (-2, -1)[fill=red!30]{$\ctg\alpha > 0$};
-
           \draw[dashed] (1, -3.5) rectangle (3, -0.5);
           \node at (2, -3){$\sin\alpha < 0$};
           \node at (2, -2.33)[fill=red!30]{$\cos\alpha > 0$};
