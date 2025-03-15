@@ -1,69 +1,71 @@
 \chapter{Magnetyzm}
   \section{Pole magnetyczne}
     \begin{definition}
-      \textbf{Pole magnetyczne} to przestrzeń, w~której na~umieszczone w niej naładowane cząstki oraz ciała o~właściwościach magnetycznych działają siły magnetyczne. Ciała wykazujące właściwości magnetyczne posiadają \textbf{domeny magnetyczne} --- obszary o~stałym namagnesowaniu. Źródłem pola magnetycznego może być np. magnes trwały lub~przewodnik z~prądem (doświadczenie Ørsteda)
+      \textbf{Pole magnetyczne} to przestrzeń, w której na umieszczone w niej naładowane cząstki oraz ciała o~właściwościach magnetycznych działają siły magnetyczne. Ciała wykazujące właściwości magnetyczne posiadają \textbf{domeny magnetyczne} --- obszary o~stałym namagnesowaniu. Źródłem pola magnetycznego może być np. magnes trwały lub~przewodnik z~prądem (doświadczenie Ørsteda)
       \begin{center}
         \begin{tikzpicture}
           % magnes
         \end{tikzpicture}
       \end{center}
     \end{definition}
-    \begin{subequations}
-      \begin{definition}
-        \textbf{Indukcja pola magnetycznego} to~wielkość wektorowa wyrażająca natężenie pola magnetycznego w~danym punkcie przestrzeni.
-        \begin{equation}
-          B = \frac{F}{qv} \unit{T}
-        \end{equation}
-      \end{definition}
-      \subsection{Pole magnetyczne prostoliniowego przewodnika}
-        \begin{equation}
-          B = \frac{\mu_0 I}{2\pi r}
-        \end{equation}
-        gdzie: $\mu_0$ -- stała przenikalności magnetycznej próżni
-        \begin{equation*}
-          \mu_0 = 4\pi\cdot 10^{-7} \unit{\frac{Tm}{A},\;\frac{N}{A^2}}
-        \end{equation*}
-      \subsection{Pole magnetyczne gęstej zwojnicy}
-        \begin{equation}
-          B = \frac{\mu_0 nI}{l}
-        \end{equation}
-        gdzie:\\
-        \tab $n$ -- ilość nawiniętych zwojów\\
-        \tab $l$ -- długość zwojnicy
-      \subsection{Pole magnetyczne pętli (pojedynczego zwoju)}
-        \begin{equation}
-          B = \frac{\mu_0 I}{2r}
-        \end{equation}
-    \end{subequations}
+
+    \begin{definition}
+      \textbf{Indukcja pola magnetycznego} to wielkość wektorowa wyrażająca natężenie pola magnetycznego w~danym punkcie przestrzeni.
+      \begin{equation}
+        B = \frac{F}{qv} \unit{T}
+      \end{equation}
+    \end{definition}
+
+    \subsection{Pole magnetyczne prostoliniowego przewodnika}
+      \begin{equation*}
+        B = \frac{\mu_0 I}{2\pi r}
+      \end{equation*}
+      \begin{symbols}
+        \item $\mu_0$ -- stała przenikalności magnetycznej próżni
+      \end{symbols}
+      \begin{equation*}
+        \mu_0 = 4\pi\cdot 10^{-7} \units{\frac{Tm}{A}}{\frac{N}{A^2}}
+      \end{equation*}
+
+    \subsection{Pole magnetyczne gęstej zwojnicy}
+      \begin{equation*}
+        B = \frac{\mu_0 nI}{l}
+      \end{equation*}
+      \begin{symbols}
+        \item $n$ -- ilość nawiniętych zwojów
+        \item $l$ -- długość zwojnicy
+      \end{symbols}
+
+    \subsection{Pole magnetyczne pętli (pojedynczego zwoju)}
+      \begin{equation*}
+        B = \frac{\mu_0 I}{2r}
+      \end{equation*}
+
   \section{Siła elektrodynamiczna}
-    \begin{subequations}
-      \begin{definition}
-        \textbf{Siła elektrodynamiczna} to~siła działająca na~umieszczony w~polu magnetycznym przewodnik, przez który przepływa prąd elektryczny, powodując jego ruch.
-        \begin{equation}
-          \begin{gathered}
-            \vec F = I\Delta\vec l\times\vec B \unit{N}\\
-            F = I\Delta l\cdot B\sin\measuredangle(\Delta\vec l, \vec B)
-          \end{gathered}
-        \end{equation}
-        jeżeli $\Delta\vec l \perp \vec B$, to:
-        \begin{equation}
-          \boxed{F = BI\Delta l}
-        \end{equation}
-      \end{definition}
-  \end{subequations}
+    \begin{definition}
+      \textbf{Siła elektrodynamiczna} to siła działająca na~umieszczony w~polu magnetycznym przewodnik, przez który przepływa prąd elektryczny, powodując jego ruch.
+      \begin{gather*}
+          \vec F = I\Delta\vec l\times\vec B \unit{N}\\
+          F = I\Delta l\cdot B\sin\measuredangle(\Delta\vec l, \vec B)
+      \end{gather*}
+      jeżeli $\Delta\vec l \perp \vec B$, to:
+      \begin{equation}
+        \boxed{F = BI\Delta l}
+      \end{equation}
+    \end{definition}
+
   \section{Siła Lorenza}
-    \begin{subequations}
-      \begin{definition}
-        \textbf{Siła Lorenza} to~siła działająca na~naładowane cząstki poruszające się w~polu magnetycznym powodująca odchylenie toru ruchu tych cząstek.
-      \begin{equation}
-        \begin{gathered}
-          \vec F_L = q\vec v\times\vec B \unit{N}\\
-          F_L = qvB\sin\measuredangle(\vec v, \vec B)
-        \end{gathered}
-      \end{equation}
-      jeżeli $\vec v\perp\vec B$, to:
-      \begin{equation}
-        \boxed{F_L = qvB}
-      \end{equation}
-      \end{definition}
-    \end{subequations}
+    \begin{definition}
+      \textbf{Siła Lorenza} to siła działająca na~naładowane cząstki poruszające się w~polu magnetycznym powodująca odchylenie toru ruchu tych cząstek.
+    \begin{gather*}
+      \vec F_L = q\vec v\times\vec B \unit{N}\\
+      F_L = qvB\sin\measuredangle(\vec v, \vec B)
+    \end{gather*}
+    jeżeli $\vec v\perp\vec B$, to:
+    \begin{equation}
+      \boxed{F_L = qvB}
+    \end{equation}
+    \end{definition}
+
+  \section{Cyklotron}
+    Cyklotron służy do przyspieszania cząstek obdarzonych ładunkiem. Składa się z dwóch duantów w kształcie puszki.
