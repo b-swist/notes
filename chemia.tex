@@ -1,0 +1,80 @@
+\documentclass{article}
+\title{Chemia}
+\author{Bartosz Świst}
+\date{2025-03-16}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+
+\newcommand\formula[2]{\begin{center}\chemname{\chemfig{#1}}{#2}\end{center}}
+\newcommand\reaction[1]{\begin{center}\ce{#1}\end{center}}
+
+\begin{document}
+  \maketitle\newpage
+
+  \section{Kwasy karboksylowe}
+    % \begin{center}\chemname{\chemfig{R-C(=[1]O)-[7]O-H}}{Wzór ogólny}\end{center}
+    \formula{R-C(=[1]O)-[7]O-H}{Wzór ogólny}
+
+    \subsection{Szereg homologiczny}
+      \formula{H-C(=[1]O)-[7]O-H}{kwas mrówkowy (metanowy)}
+      \formula{CH_3-C(=[1]O)-[7]O-H}{kwas octowy (etanowy)}
+      \formula{CH_3-CH_2-C(=[1]O)-[7]O-H}{kwas propinowy (propanowy)}
+      \formula{CH_3-CH_2-CH_2-C(=[1]O)-[7]O-H}{kwas maślany (butanowy)}
+
+    \subsection{Właściwości}
+      \begin{enumerate}
+        \item Kwasy karboksylowe to słabe elektrolity, ulegające dysocjacji:
+        \reaction{RCOOH <=> H+ + RCOO-}
+        \item Reagują z:
+        \begin{itemize}
+          \item metalami, np:
+          \reaction{2HCOOH + Zn -> (HCOO)2Zn + H2 ^}
+          \item tlenkami metali, np:
+          \reaction{2CH3COOH + CuO -> (CH3COO)2Cu + H2O}
+          \item wodorotlenkami, np:
+          \reaction{HCOOH + KOH -> HCOOK + H2O}
+        \end{itemize}
+        \item Są wypierane przez silniejsze kwasy z roztworów ich soli, np:
+        \reaction{CH3COONa + HCl -> CH3COOH + NaCl}
+        \reaction{2HCOOK + H2SO4 -> 2HCOOH + K2SO4}
+      \end{enumerate}
+
+    \subsection{Wyższe kwasy karboksylowe}
+      \begin{enumerate}
+        \item Nasycone:
+          \begin{itemize}
+            \item kwas stearynowy (\chemfig{C_{17}H_{35}COOH})
+            \item kwas palmitynowy (\chemfig{C_{15}H_{31}COOH})
+          \end{itemize}
+        \item Nienasycone:
+          \begin{itemize}
+            \item kwas oleinowy (\chemfig{C_{17}H_{33}COOH})
+          \end{itemize}
+      \end{enumerate}
+
+      \subsubsection*{Mydła}
+        Mydła to związki wyższych kwasów karboksylowych z metalami:
+        \begin{itemize}
+          \item sodem (\chemfig{Na})
+          \item potasem (\chemfig{K})
+          \item magnesem (\chemfig{Mg})
+          \item wapniem (\chemfig{Ca})
+        \end{itemize}
+
+  \section{Estry}
+    \formula{R^1-C(=[6]O)-O-R^2}{Wzór ogólny}
+    \textbf{\textit{Estryfikacja}} to odwaraclna reakcja kwasu z alkoholem, w~której powstaje ester i~woda w~obecności katalizatora --- silnego kwasu (zazwyczaj \chemfig{H_2SO_4}) --- w~celu obniżenia granicy energetycznej równania.
+    \reaction{R^1COOH + R^2OH <-->[H2SO4] R^1COOR^2 + H2O}
+
+    \subsection*{Hydroliza estrów}
+      \begin{enumerate}
+        \item Kwasowa, np:
+        \reaction{CH3COOCH2CH3 + H2O <-->[H2SO4] CH3COOH + CH3CH2OH}
+        \item Zasadowa, np:
+        \reaction{HCOOCH3 + NaOH ->[H2O] HCOONa + CH3OH}
+      \end{enumerate}
+
+\end{document}
