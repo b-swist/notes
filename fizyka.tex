@@ -6,25 +6,39 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
-\usepackage{amsmath, amssymb, amsthm, tikz}
+% \usepackage[document]{ragged2e}
+\usepackage{microtype, indentfirst, tocloft}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
 
+\renewcommand{\cftchapaftersnum}{.}
+\cftsetindents{chapter}{0pt}{2.2em}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setcounter{tocdepth}{0}
+\renewcommand{\chaptername}{Rozdział}
 \DeclareMathOperator{\tg}{tg}
 \DeclareMathOperator{\const}{const.}
-\newcommand{\unit}[1]{\,\left[\mathrm{#1}\right]}
-\newcommand{\tab}{\hspace*{3mm}}
-\newcommand{\bi}[1]{\textbf{\textit{#1}}}
-\renewcommand{\chaptername}{Rozdział}
 
-\newtheoremstyle{colon}{\topsep}{\topsep}{\itshape}{}{\bfseries}{:}{5pt plus 1pt minus 1pt}{}
+\newcommand{\unit}[1]{\;\left[\mathrm{#1}\right]}
+\newcommand{\units}[2]{\;\left[\mathrm{#1},\,\mathrm{#2}\right]}
+\newcommand{\tab}{\hspace*{4mm}}
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+
+\newenvironment{symbols}{\normalfont gdzie:\begin{list}{}{\setlength{\leftmargin}{4mm}\setlength{\itemsep}{1pt}\setlength{\topsep}{2pt}}}{\end{list}}
+
+\newtheoremstyle{colon}{}{}{\slshape}{}{\bfseries}{:}{0.5em}{}
 \theoremstyle{colon}
-\newtheorem*{inner}{\innerheader}
 \newcommand{\innerheader}{}
+\newtheorem*{inner}{\innerheader}
 \newenvironment{law}[1]{\renewcommand\innerheader{#1}\begin{inner}}{\end{inner}}
+
 \theoremstyle{definition}
 \newtheorem*{definition}{Definicja}
 
 \begin{document}
   \maketitle
+  \tableofcontents
   \input{./fizyka/kinematyka.tex}
   \input{./fizyka/dynamika.tex}
   \input{./fizyka/praca-moc-energia.tex}
