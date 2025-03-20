@@ -1,45 +1,41 @@
 \chapter{Magnetyzm}
   \section{Pole magnetyczne}
     \begin{definition}
-      \textbf{Pole magnetyczne} to przestrzeń, w której na umieszczone w niej naładowane cząstki oraz ciała o~właściwościach magnetycznych działają siły magnetyczne. Ciała wykazujące właściwości magnetyczne posiadają \textbf{domeny magnetyczne} --- obszary o~stałym namagnesowaniu. Źródłem pola magnetycznego może być np. magnes trwały lub~przewodnik z~prądem (doświadczenie Ørsteda)
-      \begin{center}
-        \begin{tikzpicture}
-          % magnes
-        \end{tikzpicture}
-      \end{center}
+      \textbf{Pole magnetyczne} to przestrzeń, w której na umieszczone w niej naładowane cząstki oraz ciała o~właściwościach magnetycznych działają siły magnetyczne. Ciała wykazujące właściwości magnetyczne posiadają \textbf{domeny magnetyczne} --- obszary o~stałym namagnesowaniu. Źródłem pola magnetycznego może być np. magnes trwały lub~przewodnik z~prądem (doświadczenie Ørsteda).
     \end{definition}
 
-    \begin{definition}
-      \textbf{Indukcja pola magnetycznego} to wielkość wektorowa wyrażająca natężenie pola magnetycznego w~danym punkcie przestrzeni.
-      \begin{equation}
-        B = \frac{F}{qv} \unit T
-      \end{equation}
-    \end{definition}
-
+    \begin{subequations}
     \subsection{Pole magnetyczne prostoliniowego przewodnika}
-      \begin{equation*}
+      \begin{equation}
         B = \frac{\mu_0 I}{2\pi r}
-      \end{equation*}
+      \end{equation}
       \begin{symbols}
         \item $\mu_0$ -- stała przenikalności magnetycznej próżni
       \end{symbols}
       \begin{equation*}
         \mu_0 = 4\pi\cdot 10^{-7} \units{\frac{Tm}{A}}{\frac{N}{A^2}}
       \end{equation*}
+      \begin{law}{Reguła prawej prawej ręki dla prostoliniowego przewodnika}
+        Jeżeli kciuk zaciśniętej wokół prewodnika prawej ręki wskazuje kierunek przepływu prądu, to reszta palców tej ręki wskazuje zwrot linii pola magrnetyczego.
+      \end{law}
 
     \subsection{Pole magnetyczne gęstej zwojnicy}
-      \begin{equation*}
+      \begin{equation}
         B = \frac{\mu_0 nI}{l}
-      \end{equation*}
+      \end{equation}
       \begin{symbols}
         \item $n$ -- ilość nawiniętych zwojów
         \item $l$ -- długość zwojnicy
       \end{symbols}
+      \begin{law}{Reguła prawej ręki dla zwojnicy}
+        Jeżeli palce prawej ręki (oprócz kciuka) wskazują kierunek przepływu prądu w zwojach zwojnicy, to kciuk wskazuje zwrot, w którym znajduje się północny biegun magnesu.
+      \end{law}
 
     \subsection{Pole magnetyczne pętli (pojedynczego zwoju)}
-      \begin{equation*}
+      \begin{equation}
         B = \frac{\mu_0 I}{2r}
-      \end{equation*}
+      \end{equation}
+    \end{subequations}
 
   \section{Siła elektrodynamiczna}
     \begin{definition}
@@ -53,10 +49,13 @@
         \boxed{F = BI\Delta l}
       \end{equation}
     \end{definition}
+    \begin{law}{Zasada lewej ręki dla siły elektrodynamicznej}
+      Jeżeli palce lewej ręki (oprócz kciuka) wskazują kierunek przepływu prądu, a wewnętrzna część dłoni jest skierowana tak, że wbijają się w nią linie pola magnetycznego, to kciuk wskazuje zwrot działania siły elektrodynamicznej.
+    \end{law}
 
   \section{Siła Lorenza}
     \begin{definition}
-      \textbf{Siła Lorenza} to siła działająca na~naładowane cząstki poruszające się w~polu magnetycznym powodująca odchylenie toru ruchu tych cząstek.
+      \bi{Siła Lorenza} to siła działająca na~naładowane cząstki poruszające się w~polu magnetycznym powodująca odchylenie toru ruchu tych cząstek.
     \begin{gather*}
       \vec F_L = q\vec v\times\vec B \unit N\\
       F_L = qvB\sin\measuredangle(\vec v, \vec B)
@@ -66,6 +65,9 @@
       \boxed{F_L = qvB}
     \end{equation}
     \end{definition}
+    \begin{law}{Zasada lewej ręki dla siły Lorenza}
+      Jeżeli palce lewej ręki (oprócz kciuka) wskazują zwrot wektora prędkości cząstki, a wewnętrzna część dłoni jest skierowana tak, że wbijają się w nią linie pola magnetycznego, to kciuk wskazuje zwrot działania siły Lorenza dla cząstek naładowanych dodatnie, a przeviwny zwrot dla cząstek naładowanych ujemnie.
+    \end{law}
 
   \section{Cyklotron}
     Cyklotron służy do przyspieszania cząstek obdarzonych ładunkiem. Składa się z dwóch duantów w kształcie puszki.
@@ -76,10 +78,47 @@
       \begin{tikzpicture}
       \end{tikzpicture}
     \end{center}
-    \begin{equation}
-      F = \frac{\mu_0\Delta lI_1I_2}{2\pi r} \unit N
-    \end{equation}
+    \begin{equation*}
+      F = \frac{\mu_0I_1I_2\Delta l}{2\pi r} \unit N
+    \end{equation*}
     jeżeli $I_1 = I_2$, to:
     \begin{equation*}
-      F = \frac{\mu_0\Delta lI^2}{2\pi r}
+      F = \frac{\mu_0I^2\Delta l}{2\pi r}
     \end{equation*}
+
+  \section{Właściwości magnetyczne substancji}
+    Ze względu na właściości magnetyczne substancje dzielimy na:
+    \begin{itemize}
+      \item ferromagnetyki
+      \item paramagnetyki
+      \item diamagnetyki
+    \end{itemize}
+
+
+    \bi{Ferromagnetyki} posiadają silne właściwości magnetyczne, np. żelazo, kobalt, nikiel. ($\mu_r \gg 1$)
+
+    \bi{Paramagnetyki} wykazują słabe właściwości magnetyczne, np. aluminium, cyna, magnez, hemoglobina, ciekły tlen. ($\mu_r > 1$)
+
+    \bi{Diamagnetyki} nie wykazują żadnych właściwości magnetycznych, osłabiają pola magnetyczne zewnętrzne, wypychają pole mangetyczne ze swojego wnętrza, np. miedź, złoto, ołów, cynk, gazy szlachetne. ($\mu_r <1$)
+
+    \begin{equation*}
+      \mu_r = \frac{B}{B_0}
+    \end{equation*}
+    \begin{symbols}
+     \item $\mu_r$ -- względna przenikalność magnetyczna substancji
+     \item $B$ -- indukcja magnetyczna w próżni
+     \item $B_0$  -- indukcja magnetyczna wewnątrz substancji
+    \end{symbols}
+
+    \subsection{Pętla histerezy ferromagnetyka}
+
+  \section{Silnik elektryczny}
+    Silnik elektryczny zamienia energię elektryczną w energię mechaniczną. Zbudowany jest ze:
+    \begin{itemize}
+      \item stojana, na którym umieszczono elektromagnesy
+      \item wirnika
+      \item komutatora, który zamienia kierunek przepływu prądu
+      \item szczotek, np. grafitowych
+    \end{itemize}
+
+    Prąd elektryczny, przepływając przez wirnik składający się z wielu uzwojeń, wytwarza pole magnetyczne, które oddziałuje z polem magnetycznym elektektromagnesów. Pojawia się siła elektrodynamiczna, która powoduje obrót wirnika.
