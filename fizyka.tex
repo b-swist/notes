@@ -25,30 +25,41 @@
 \newcommand\tab{\hspace*{4mm}}
 \newcommand\bi[1]{\textbf{\textit{#1}}}
 
-\newenvironment{symbols}{\normalfont gdzie:\begin{list}{}{\setlength{\leftmargin}{4mm}\setlength{\itemsep}{1pt}\setlength{\topsep}{2pt}}}{\end{list}}
+\newenvironment{symbols}{\normalfont gdzie:
+  \begin{list}{}{
+      \setlength{\leftmargin}{4mm}
+      \setlength{\itemsep}{1pt}
+      \setlength{\topsep}{2pt}
+  }}{
+\end{list}}
 
 \newtheoremstyle{colon}{}{}{\slshape}{}{\bfseries}{:}{0.5em}{}
 \theoremstyle{colon}
 \newcommand\innerheader{}
 \newtheorem*{inner}{\innerheader}
-\newenvironment{law}[1]{\renewcommand\innerheader{#1}\begin{inner}}{\end{inner}}
+\newenvironment{law}[1]{\renewcommand\innerheader{#1}
+\begin{inner}}{
+\end{inner}}
 
 \theoremstyle{definition}
 \newtheorem*{definition}{Definicja}
 
 \begin{document}
-  \maketitle
-  \tableofcontents
-  \input{./fizyka/kinematyka.tex}
-  \input{./fizyka/dynamika.tex}
-  \input{./fizyka/praca-moc-energia.tex}
-  \input{./fizyka/hydrostatyka.tex}
-  \input{./fizyka/bryla-sztywna.tex}
-  \input{./fizyka/grawitacja.tex}
-  \input{./fizyka/ruch-drgajacy.tex}
-  \input{./fizyka/termodynamika.tex}
-  \input{./fizyka/elektrostatyka.tex}
-  \input{./fizyka/prad-elektryczny.tex}
-  \input{./fizyka/magnetyzm.tex}
-  \input{./fizyka/elektromagnetyzm.tex}
+
+\maketitle
+\tableofcontents
+
+\input{./fizyka/kinematyka.tex}
+\input{./fizyka/dynamika.tex}
+\input{./fizyka/praca-moc-energia.tex}
+\input{./fizyka/hydrostatyka.tex}
+\input{./fizyka/bryla-sztywna.tex}
+\input{./fizyka/grawitacja.tex}
+\input{./fizyka/ruch-drgajacy.tex}
+\input{./fizyka/termodynamika.tex}
+\input{./fizyka/elektrostatyka.tex}
+\input{./fizyka/prad-elektryczny.tex}
+\input{./fizyka/magnetyzm.tex}
+\input{./fizyka/elektromagnetyzm.tex}
+
 \end{document}

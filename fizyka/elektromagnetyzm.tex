@@ -1,15 +1,114 @@
 \chapter{Elektromagnetyzm}
-  \section{Zjawisko indukcji elektromagnetyczej}
+\section{Zjawisko indukcji elektromagnetyczej}\label{faraday}
 
-    \begin{definition}
-      \textbf{Zjawisko indukcji elektromagnetyczej Faradaya} polega na wzbudzeniu w zwojnicy zmiennego pola elektrycznego wskutek działania zewnętrznego, zmiennego pola magnetycznego. W układzie zwojnicy indukuje się siła elektromagnetyczna, a po podłączeniu odbiornika w układzie płynie prąd indukcyjny.
-    \end{definition}
+\begin{definition}
+  \textbf{Zjawisko indukcji elektromagnetyczej Faradaya} polega na wzbudzeniu w zwojnicy zmiennego
+  pola elektrycznego wskutek działania zewnętrznego, zmiennego pola magnetycznego. W układzie
+  zwojnicy indukuje się siła elektromagnetyczna, a po podłączeniu odbiornika w układzie płynie prąd
+  indukcyjny.
 
-    \begin{law}{Reguła Lenza}
-      Prąd indukcyjny wytworzony przez indukcję elektromagnetyczną przyjmuje taki kierunek, by pole magnetyczne wytworzone przez jego przepływ przeciwstawiało się przyczynie wywołania prądu.
-    \end{law}
+  \vspace{1em}\noindent Jego siła zależy od:
+  \begin{itemize}
+    \item ilości zwojów,
+    \item wartość indukcji magnetycznej zewnętrznego pola (magnesu),
+    \item szybkość zmiany pola magnetycznego (szybkość ruchu magnesu).
+  \end{itemize}
+\end{definition}
 
-  \section{Zjawisko samoindukcji}
+\begin{law}{Reguła Lenza}
+  Prąd indukcyjny wytworzony przez indukcję elektromagnetyczną przyjmuje taki kierunek, by pole
+  magnetyczne wytworzone przez jego przepływ przeciwstawiało się przyczynie wywołania prądu.
+\end{law}
 
-  \section{Prąd przemienny}
-    \subsection{Transformator}
+\section{Zjawisko samoindukcji}
+\subsection{Strumień indukcji magnetycznej}
+
+\begin{definition}
+  \textbf{Strumień indukcji magnetycznej} to strumień pola dla indukcji magentycznej.
+  \begin{equation}
+    \begin{gathered}
+      \Phi = \vec B\cdot\vec S\unit{Wb}\\
+      \Phi = BS\cos\measuredangle(\vec B, \vec S)
+    \end{gathered}
+  \end{equation}
+\end{definition}
+
+\begin{definition}
+  \textbf{Współczynnik samoindukcji} (indukcyjność) to stały stosunek wytwarzanego przez prąd
+  strumienia indukcji magnetycznej do natężenia tego prądu.
+  \begin{gather*}
+    L = \frac\Phi I \unit H\\
+    L = \const
+  \end{gather*}
+\end{definition}
+
+\begin{definition}
+  \textbf{Zjawisko samoindukcji} polega na wytwarzaniu się \textit{SEM} w zwojnicy pod wpływem
+  zjawiska indukcji Faradaya [\ref{faraday}].
+  \begin{equation}
+    \begin{gathered}
+      \mathcal E = -\frac{\Delta\Phi}{\Delta t}\unit V\\
+      \mathcal E = -L\frac{\Delta I}{\Delta t}
+    \end{gathered}
+  \end{equation}
+\end{definition}
+
+\section{Prąd przemienny}
+\subsection{Wzory wartości chwilowych}
+\begin{subequations}
+  \begin{gather}
+    \Phi(t) = BS\cos\omega t\\[10pt]
+    \begin{aligned}
+      \mathcal E(t) &= \omega BS\sin\omega t\\
+      &= \mathcal E_0\sin\omega t
+    \end{aligned}\\[10pt]
+    \begin{aligned}
+      I(t) &= \frac{\mathcal E_0}{R}\sin\omega t\\
+      &= I_0\sin\omega t
+    \end{aligned}\\[10pt]
+    U(t) = I_0R\sin\omega t\\[10pt]
+    P(t) = RI_0^2\sin^2\omega t
+  \end{gather}
+\end{subequations}
+
+\subsection{Moc średnia}
+\begin{equation}
+  P_\text{śr} = \frac 12RI_0^2
+\end{equation}
+
+\subsection{Wzory wartości skutecznych}
+\begin{subequations}
+  \setlength\jot{5pt}
+  \begin{gather}
+    I_s = \frac{I_0}{\sqrt 2}\\
+    U_s = \frac{U_0}{\sqrt 2}
+    P_s = \frac 12U_0I_0\\
+  \end{gather}
+\end{subequations}
+
+\section{Transformator}
+\begin{definition}
+  \textbf{Transformator} to urządzenie służące do zmiany napięcia prądu przemiennego.
+
+  \begin{equation}
+    \frac{U_1}{U_2} = \frac{n_1}{n_2} = \frac{I_2}{I_1}
+  \end{equation}
+  \begin{symbols}
+    \item $U_1$ -- napięcie na uzwojeniu pierwotnym
+    \item $n_1$ -- ilość zwojów na uzwojeniu pierwotnym
+    \item $I_1$ -- natężenie prądu na uzwojeniu pierwotnym
+      \vspace{10pt}
+    \item $U_2$ -- napięcie na uzwojeniu wtórnym
+    \item $n_2$ -- ilość zwojów na uzwojeniu wtórnym
+    \item $I_2$ -- natężenie prądu na uzwojeniu wtórnym
+  \end{symbols}
+\end{definition}
+
+\subsection{Przekładnia transformatora}
+\begin{definition}
+  \textbf{Przekładnia transformatora} to stosunek ilości zwojów (lub napięcia) na uzwojeniu wtórym
+  do ilości zwojów (lub napięcia) uzwojeniu pierwotnym.
+  \begin{equation}
+    \vartheta = \frac{n_2}{n_1} = \frac{U_2}{U_1}
+  \end{equation}
+\end{definition}
