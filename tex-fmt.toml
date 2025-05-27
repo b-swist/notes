@@ -1,0 +1,4 @@
+wraplen = 110
+tabsize = 2
+tabchar = "space"
+lists = [ "symbols" ]
