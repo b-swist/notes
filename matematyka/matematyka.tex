@@ -1,0 +1,26 @@
+\documentclass{report}
+\title{Matematyka}
+\date{2025-02-25}
+\author{Bartosz Świst}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath, amssymb, amsthm, tikz}
+\usetikzlibrary{decorations.pathreplacing, calligraphy}
+
+\newtheorem*{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+\DeclareMathOperator\tg{tg}
+\DeclareMathOperator\ctg{ctg}
+\renewcommand\chaptername{Rozdział}
+\setlength\jot{6pt}
+\renewcommand\arraystretch{1.9}
+
+\begin{document}
+
+\maketitle
+\input{./geometria.tex}
+\input{./trygonometria.tex}
+
+\end{document}
