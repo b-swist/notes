@@ -1,140 +1,151 @@
 \chapter{Elektrostatyka}
-  \section{Ładunek elektryczny}
-    \begin{gather*}
-      |e| = 1,6\cdot 10^{-19} \unit C\\
-      q = ne \unit{C}
-    \end{gather*}
-    \begin{law}{Zasada zachowania ładunku}
-      W izolowanym układzie całkowity ładunek elektryczny nie ulega zmianie.
-      \begin{equation}
-        \sum_{i=1}^n q_i = \const
-      \end{equation}
-    \end{law}
 
-  \section{Prawo Coulomba}
-    \begin{law}{Prawo Coulomba}
-      Siła wzajemnego oddziaływania dwóch ładunków jest wprost proporcjonalna do iloczynu tych ładunków i odwrotnie proporcjonalna do kwadratu odległości między nimi.
-      \begin{equation}\label{coulomb}
-        \boxed{F = k\frac{Qq}{r^2} \unit N}
-      \end{equation}
-      \begin{symbols}
-        \item $k$ -- współczynnik proporcjonalności (stała eletrostatyczna)
-        \item $\varepsilon_0$ -- stała przenikalności elektrycznej próżni
-      \end{symbols}
-      \begin{gather*}
-        k = \frac{1}{4\pi\varepsilon_0} \approx 8,99\cdot 10^9 \unit{\frac{N\cdot m^2}{C^2}}\\[0.5em]
-        \varepsilon_0 = 8,85\cdot 10^{-12} \unit{\frac{C^2}{N\cdot m^2}}
-      \end{gather*}
-    \end{law}
+\section{Ładunek elektryczny}
+\begin{gather*}
+  |e| = 1,6\cdot 10^{-19} \unit C\\
+  q = ne \unit C
+\end{gather*}
 
-  \section{Natężenie pola elektrostatycznego}
-    \begin{definition}
-      \bi{Natężenie pola elektrostatycznego} to stosunek siły elektrostatycznej działającej na \emph{dodatni} ładunek próbny $q$ w danym punkcie pola do~wartości tego ładunku.
-      \begin{subequations}
-        \begin{equation}\label{natężenie es}
-          \vec E = \frac{\vec F}{q} \unit{\frac NC}\\[0.5em]
-        \end{equation}
-        Wstawiając równanie \ref{coulomb} do równania \ref{natężenie es} otrzymujemy:
-        \begin{equation}
-          \boxed{E = \frac{kQ}{r^2}}
-        \end{equation}
-      \end{subequations}
-    \end{definition}
+\begin{law}{Zasada zachowania ładunku}
+  W izolowanym układzie całkowity ładunek elektryczny nie ulega zmianie.
+  \begin{equation}
+    \sum_{i=1}^n q_i = \const
+  \end{equation}
+\end{law}
 
-  \section{Rozmieszczenie ładunku na przewodniku}
-    Po namagnesowaniu ciała cały dostarczony ładunek rozmieszcza się na jego zewnętrznej powierzchni. Pole elektromagnetyczne wewnątrz zanika.
+\section{Prawo Coulomba}
+\begin{law}{Prawo Coulomba}
+  Siła wzajemnego oddziaływania dwóch ładunków jest wprost proporcjonalna do iloczynu tych ładunków
+  i odwrotnie proporcjonalna do kwadratu odległości między nimi.
+  \begin{equation}\label{coulomb}
+    \boxed{F = k \frac{Qq}{r^2} \unit N}
+  \end{equation}
+  \begin{symbols}
+    \item $k$ -- współczynnik proporcjonalności (stała elektrostatyczna)
+    \item $\varepsilon_0$ -- stała przenikalności elektrycznej próżni
+  \end{symbols}
+  \begin{gather*}
+    k = \frac{1}{4\pi\varepsilon_0} \approx 8,99 \cdot 10^9 \unit{\frac{N \cdot m^2}{C^2}}\\[0.5em]
+    \varepsilon_0 = 8,85 \cdot 10^{-12} \unit{\frac{C^2}{N \cdot m^2}}
+  \end{gather*}
+\end{law}
 
-    Rozmieszczenie ładunku na powierzchni zależy od jego kształu. Rozkład ładunku opisuje gęstość powierzchniowa ładunku --- iloraz ładunku i pole tej powierzchni.
-    \begin{equation*}
-      \sigma = \frac QS \unit{\frac{C}{m^2}}
-    \end{equation*}
-
-  \section{Praca w polu centralnym}
-    \begin{equation}\label{praca es}
-      W_{A\rightarrow B} = -kQq\left(\frac{1}{r_A} - \frac{1}{r_B}\right) \unit J
+\section{Natężenie pola elektrostatycznego}
+\begin{definition}
+  \bi{Natężenie pola elektrostatycznego} to stosunek siły elektrostatycznej działającej na
+  \emph{dodatni} ładunek próbny $q$ w danym punkcie pola do~wartości tego ładunku.
+  \begin{subequations}
+    \begin{equation}\label{natężenie es}
+      \vec E = \frac{\vec F}{q} \unit{\frac NC}\\[0.5em]
     \end{equation}
-
-  \section{Energia w polu centralnym}
-  \begin{equation}\label{energia es}
-      E_p = \frac{kQq}{r} \unit J
+    Wstawiając równanie \ref{coulomb} do równania \ref{natężenie es} otrzymujemy:
+    \begin{equation}
+      \boxed{E = \frac{kQ}{r^2}}
     \end{equation}
+  \end{subequations}
+\end{definition}
 
-  \section{Potencjał w polu centralnym}
-    \begin{definition}
-      Potencjał pola elektrostatycznego to stosunek energii potencjalnej punktowego ciała do wartości ładunku próbnego umieszczonego w tym polu.
-      \begin{subequations}
-        \begin{equation}\label{potencjał es}
-          V = \frac{E_p}{q} \unit V\\
-        \end{equation}
-        Podstawiajac równanie \ref{energia es} do równania \ref{potencjał es} otrzymujemy:
-        \begin{equation}
-          V = \frac{kQ}{r^2}
-        \end{equation}
-      \end{subequations}
-    \end{definition}
-    \begin{equation*}
-        W = \Delta E_p = q\Delta V = qU
-    \end{equation*}
+\section{Rozmieszczenie ładunku na przewodniku}
+Po namagnesowaniu ciała cały dostarczony ładunek rozmieszcza się na jego zewnętrznej powierzchni.
+Pole elektromagnetyczne wewnątrz zanika.
 
-  \section{Pojemność elektryczna przewodnika}
-    \begin{definition}
-      \bi{Pojemność elektryczna przewodnika} to stosunek ilości ładunku zgromadzonego na przewodniku do uzyskanego potencjału.
-      \begin{equation}
-        C = \frac QV \unit F
-      \end{equation}
-    \end{definition}
+Rozmieszczenie ładunku na powierzchni zależy od jego kształt. Rozkład ładunku opisuje gęstość
+powierzchniowa ładunku --- iloraz ładunku i pole tej powierzchni.
+\begin{equation*}
+  \sigma = \frac QS \unit{\frac{C}{m^2}}
+\end{equation*}
 
-  \section{Kondensator}
-    \begin{definition}
-      \bi{Kondensator} to element elektroniczny służący do gromadzenia ładunku elektrycznego.
-      \begin{equation*}
-        C = \frac{Q}{U}
-      \end{equation*}
-    \end{definition}
+\section{Praca w polu centralnym}
+\begin{equation}\label{praca es}
+  W_{A \rightarrow B} = -kQq \left(\frac{1}{r_A} - \frac{1}{r_B}\right) \unit J
+\end{equation}
 
-    \subsection{Łączenie kondensatorów}
-      \begin{align*}
-        U &= \const & Q &= \const\\
-        Q &= \sum_{i=1}^n Q_i & U &= \sum_{i=1}^n U_i\\
-        C_z &= \sum_{i=1}^n C_i & \frac{1}{C_z} &= \sum_{i=1}^n \frac{1}{C_i}
-      \end{align*}
+\section{Energia w polu centralnym}
+\begin{equation}\label{energia es}
+  E_p = \frac{kQq}{r} \unit J
+\end{equation}
 
-    \subsection{Kondensator płaski}
-      \begin{definition}
-        Kondensator płaski składa się z dwóch równoległych, metalowych okładek, między którymi znajduje się dielektryk.\\[1.5em]
-        Bez dielektryka:
-        \begin{equation*}
-          C = \frac{\varepsilon_0S}{d}
-        \end{equation*}
-        Uwzględniając dielektryk:
-        \begin{equation*}
-          C = \frac{\varepsilon_0\varepsilon_rS}{d}
-        \end{equation*}
-        Natężenie pola elektrycznego kondensatora:
-        \begin{equation*}
-          E = \frac Ud
-        \end{equation*}
-        \begin{symbols}
-          \item $d$ -- odległość między okładkami
-          \item $S$ -- pole powierzchni okładek
-          \item $\varepsilon_r$ -- stała przenikalność dielektryka
-        \end{symbols}
-      \end{definition}
+\section{Potencjał w polu centralnym}
+\begin{definition}
+  Potencjał pola elektrostatycznego to stosunek energii potencjalnej punktowego ciała do wartości
+  ładunku próbnego umieszczonego w tym polu.
+  \begin{subequations}
+    \begin{equation}\label{potencjał es}
+      V = \frac{E_p}{q} \unit V\\
+    \end{equation}
+    Podstawiając równanie \ref{energia es} do równania \ref{potencjał es} otrzymujemy:
+    \begin{equation}
+      V = \frac{kQ}{r^2}
+    \end{equation}
+  \end{subequations}
+\end{definition}
+\begin{equation*}
+  W = \Delta E_p = q \Delta V = qU
+\end{equation*}
 
-    \subsection{Energia naładowaniego kondensatora}
-      \begin{definition}
-        \bi{energia naładowaniego kondensatora} to praca potrzebna do jego naładowania.
-        \begin{gather*}
-          E = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{Q^2}{2C} \units{eV}{J}\\[0.5em]
-          (1\mathrm{eV} = 1,6\cdot 10^{-19}\mathrm{J})
-        \end{gather*}
-      \end{definition}
-  \section{Ruch ładunków w polu elektrostatycznym}
-    Na naładowane cząstki w polu elektrostatycznym centralnym działa siła elektrostatyczna, przez którą cząstka zaczyna przyspieszać.
-    \begin{equation*}
-      F = qE
-    \end{equation*}
-    jeżeli $F = F_w$, to:
-    \begin{equation*}
-      a = \frac{qE}{m} = \frac{qU}{md} \unit{\frac{m}{s^2}}
-    \end{equation*}
+\section{Pojemność elektryczna przewodnika}
+\begin{definition}
+  \bi{Pojemność elektryczna przewodnika} to stosunek ilości ładunku zgromadzonego na przewodniku do
+  uzyskanego potencjału.
+  \begin{equation}
+    C = \frac QV \unit F
+  \end{equation}
+\end{definition}
+
+\section{Kondensator}
+\begin{definition}
+  \bi{Kondensator} to element elektroniczny służący do gromadzenia ładunku elektrycznego.
+  \begin{equation*}
+    C = \frac QU
+  \end{equation*}
+\end{definition}
+
+\subsection{Łączenie kondensatorów}
+\begin{align*}
+  U &= \const & Q &= \const\\
+  Q &= \sum_{i=1}^n Q_i & U &= \sum_{i=1}^n U_i\\
+  C_z &= \sum_{i=1}^n C_i & \frac{1}{C_z} &= \sum_{i=1}^n \frac{1}{C_i}
+\end{align*}
+
+\subsection{Kondensator płaski}
+\begin{definition}
+  Kondensator płaski składa się z dwóch równoległych, metalowych okładek, między którymi znajduje
+  się dielektryk.\\[1.5em]
+  Bez dielektryka:
+  \begin{equation*}
+    C = \frac{\varepsilon_0 S}{d}
+  \end{equation*}
+  Uwzględniając dielektryk:
+  \begin{equation*}
+    C = \frac{\varepsilon_0 \varepsilon_r S}{d}
+  \end{equation*}
+  Natężenie pola elektrycznego kondensatora:
+  \begin{equation*}
+    E = \frac Ud
+  \end{equation*}
+  \begin{symbols}
+    \item $d$ -- odległość między okładkami
+    \item $S$ -- pole powierzchni okładek
+    \item $\varepsilon_r$ -- stała przenikalność dielektryka
+  \end{symbols}
+\end{definition}
+
+\subsection{Energia naładowanego kondensatora}
+\begin{definition}
+  \bi{energia naładowanego kondensatora} to praca potrzebna do jego naładowania.
+  \begin{gather*}
+    E = \frac 12 QU = \frac 12 CU^2 = \frac{Q^2}{2C} \units{eV}{J}\\[0.5em]
+    (1\mathrm{eV} = 1,6\cdot 10^{-19} \mathrm{J})
+  \end{gather*}
+\end{definition}
+
+\section{Ruch ładunków w polu elektrostatycznym}
+Na naładowane cząstki w polu elektrostatycznym centralnym działa siła elektrostatyczna, przez którą
+cząstka zaczyna przyspieszać.
+\begin{equation*}
+  F = qE
+\end{equation*}
+jeżeli $F = F_w$, to:
+\begin{equation*}
+  a = \frac{qE}{m} = \frac{qU}{md}
+\end{equation*}
