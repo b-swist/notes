@@ -1,6 +1,6 @@
 \chapter{Elektromagnetyzm}
-\section{Zjawisko indukcji elektromagnetyczej}\label{faraday}
 
+\section{Zjawisko indukcji elektromagnetyczej}\label{faraday}
 \begin{definition}
   \textbf{Zjawisko indukcji elektromagnetyczej Faradaya} polega na wzbudzeniu w zwojnicy zmiennego
   pola elektrycznego wskutek działania zewnętrznego, zmiennego pola magnetycznego. W układzie
@@ -21,14 +21,14 @@
 \end{law}
 
 \section{Zjawisko samoindukcji}
-\subsection{Strumień indukcji magnetycznej}
 
+\subsection{Strumień indukcji magnetycznej}
 \begin{definition}
   \textbf{Strumień indukcji magnetycznej} to strumień pola dla indukcji magentycznej.
   \begin{equation}
     \begin{gathered}
-      \Phi = \vec B\cdot\vec S\unit{Wb}\\
-      \Phi = BS\cos\measuredangle(\vec B, \vec S)
+      \Phi = \vec B \cdot \vec S\unit{Wb}\\
+      \Phi = BS \cos\measuredangle(\vec B, \vec S)
     \end{gathered}
   \end{equation}
 \end{definition}
@@ -38,7 +38,7 @@
   \textbf{Współczynnik samoindukcji} (indukcyjność) to stały stosunek wytwarzanego przez prąd
   strumienia indukcji magnetycznej do natężenia tego prądu.
   \begin{gather*}
-    L = \frac\Phi I \unit H\\
+    L = \frac \Phi I \unit H\\
     L = \const
   \end{gather*}
 \end{definition}
@@ -47,34 +47,35 @@
   \textbf{Zjawisko samoindukcji} polega na wytwarzaniu się \textit{SEM} w zwojnicy pod wpływem
   zjawiska indukcji Faradaya [\ref{faraday}].
   \begin{equation}
-    \begin{gathered}
-      \mathcal E = -\frac{\Delta\Phi}{\Delta t}\unit V\\
-      \mathcal E = -L\frac{\Delta I}{\Delta t}
-    \end{gathered}
+    \begin{aligned}
+      \mathcal E &= -\frac{\Delta \Phi}{\Delta t}\\
+      &= -L\frac{\Delta I}{\Delta t}
+    \end{aligned}
   \end{equation}
 \end{definition}
 
 \section{Prąd przemienny}
+
 \subsection{Wzory wartości chwilowych}
 \begin{subequations}
   \begin{gather}
-    \Phi(t) = BS\cos\omega t\\[10pt]
+    \Phi(t) = BS \cos \omega t\\[10pt]
     \begin{aligned}
-      \mathcal E(t) &= \omega BS\sin\omega t\\
+      \mathcal E(t) &= \omega BS \sin \omega t\\
       &= \mathcal E_0\sin\omega t
     \end{aligned}\\[10pt]
     \begin{aligned}
       I(t) &= \frac{\mathcal E_0}{R}\sin\omega t\\
-      &= I_0\sin\omega t
+      &= I_0\sin \omega t
     \end{aligned}\\[10pt]
-    U(t) = I_0R\sin\omega t\\[10pt]
-    P(t) = RI_0^2\sin^2\omega t
+    U(t) = I_0 R \sin \omega t\\[10pt]
+    P(t) = R I_0^2\sin^2 \omega t
   \end{gather}
 \end{subequations}
 
 \subsection{Moc średnia}
 \begin{equation}
-  P_\text{śr} = \frac 12RI_0^2
+  P_\text{śr} = \frac 1 2 R I_0^2
 \end{equation}
 
 \subsection{Wzory wartości skutecznych}
@@ -82,8 +83,8 @@
   \setlength\jot{5pt}
   \begin{gather}
     I_s = \frac{I_0}{\sqrt 2}\\
-    U_s = \frac{U_0}{\sqrt 2}
-    P_s = \frac 12U_0I_0\\
+    U_s = \frac{U_0}{\sqrt 2}\\
+    P_s = \frac 1 2 U_0 I_0\\
   \end{gather}
 \end{subequations}
 
