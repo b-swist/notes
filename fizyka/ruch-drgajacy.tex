@@ -1,53 +1,57 @@
 \chapter{Ruch drgający}
-  \begin{gather}
-    F_z = kx\\
-    F_s = -kx
-  \end{gather}
-  \begin{equation}
-    k = \left|\frac{F_s}{x}\right| \unit{\frac Nm}
-  \end{equation}
-  \section{Ruch harmoniczny}
-    \begin{gather}
-      x = r\sin\alpha\\
-      T = 2\pi\sqrt{\frac mk} \unit{s}
-    \end{gather}
-    \subsection{Równania ruchu harmonicznego}
-      \begin{align}
-        x(t) &= A\sin(\omega t + \varphi_0)\\
-        v(t) &= \omega A\cos(\omega t + \varphi_0)\\
-        a(t) &= -\omega^2A\sin(\omega t + \varphi_0)
-      \end{align}
-      \begin{align}
-        x_{max} &= A\ \text{dla}\ \sin90^\circ = 1\\
-        v_{max} &= \omega A\ \text{dla}\ \cos0^\circ = 1\\
-        a_{max} &= -\omega^2A\ \text{dla}\ \sin90^\circ = 1\\
-      \end{align}
-    \subsection{Łączenie sprężyn}
-      \begin{gather}
-        F = \const\\
-        x = \sum_{i=1}^n x_i\\
-        \frac{1}{k} = \sum_{i=1}^n \frac{1}{k_i}
-      \end{gather}
-      \begin{gather}
-        x = \const\\
-        F_c = \sum_{i=1}^n F_i\\
-        k = \sum_{i=1}^n k_i
-      \end{gather}
-  \section{Energia w ruchu harmonicznym}
-    \begin{equation}
-      W = \frac{1}{2}Fx \Rightarrow E_{p_s} = \frac{1}{2}kx^2
-    \end{equation}
-    \begin{align}
-      E_c &= E_{p_s} + E_k\\
-      E_c &= \frac{1}{2}kA^2\\
-      E_k &= \frac{1}{2}k(A^2 - x^2)
-    \end{align}
-  \section{Wahadło matematyczne}
-    \begin{equation}
-      F = F_g\sin\alpha
-    \end{equation}
-    dla małych kątów $\sin\alpha\approx\alpha$:
-    \begin{gather}
-      F = mg\alpha\\
-      T = 2\pi\sqrt{\frac lg}
-    \end{gather}
+\begin{gather}
+  F_z = kx\\
+  F_s = -kx
+\end{gather}
+
+\begin{equation*}
+  k = \left|\frac{F_s}{x}\right| \unit{\frac N m}
+\end{equation*}
+
+\section{Ruch harmoniczny}
+\begin{gather*}
+  x = r \sin \alpha\\
+  T = 2\pi \sqrt{\frac m k} \unit s
+\end{gather*}
+
+\subsection{Równania ruchu harmonicznego}
+\begin{subequations}
+  \begin{align}
+    x(t) &= A \sin(\omega t + \varphi_0)\\
+    v(t) &= \omega A\ cos(\omega t + \varphi_0)\\
+    a(t) &= -\omega^2 A \sin(\omega t + \varphi_0)
+  \end{align}
+\end{subequations}
+
+\begin{align*}
+  x_\text{max} &= A\ \text{dla}\ \sin90^\circ = 1\\
+  v_\text{max} &= \omega A\ \text{dla}\ \cos0^\circ = 1\\
+  a_\text{max} &= -\omega^2 A\ \text{dla}\ \sin90^\circ = 1\\
+\end{align*}
+
+\subsection{Łączenie sprężyn}
+\begin{align*}
+  F &= \const & x &= \const\\
+  x &= \sum_{i=1}^n x_i & F_c &= \sum_{i=1}^n F_i\\
+  \frac 1 k &= \sum_{i=1}^n \frac{1}{k_i} & k &= \sum_{i=1}^n k_i
+\end{align*}
+
+\section{Energia w ruchu harmonicznym}
+\begin{equation*}
+  W = \frac 1 2 Fx \Rightarrow E_{p_s} = \frac 1 2 kx^2
+\end{equation*}
+
+\begin{align*}
+  E_c &= E_{p_s} + E_k = \frac 1 2 kA^2\\
+  E_k &= \frac 1 2 k(A^2 - x^2)
+\end{align*}
+
+\section{Wahadło matematyczne}
+\begin{equation*}
+  F = F_g \sin \alpha
+\end{equation*}
+dla małych kątów $\sin \alpha \approx \alpha$:
+\begin{gather*}
+  F = mg\alpha\\
+  T = 2\pi\sqrt{\frac lg}
+\end{gather*}
