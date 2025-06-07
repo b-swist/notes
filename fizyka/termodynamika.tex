@@ -1,165 +1,168 @@
 \chapter{Termodynamika}
 
-  \section{Zasady dynamiki}
-    \begin{law}{Zerowa zasada dynamiki}
-      Jeżeli ciało A jest w równowadze termodynamicznej z ciałem B, a ciało B jest w równowadze termodynamicznej z ciałem C, to ciała A i C są również w równowadze termodynamicznej.
-    \end{law}
-    \begin{law}{Pierwsza zasada termodynamiki}
-      Zmiana energii wewnętrznej ciała jest równa sumie ilości ciepła wymienionego z otoczeniem i pracy wykonanej nad ciałem przez siłę zewnętrzną.
-    \end{law}
-    \begin{equation}
-      p = \frac 23\cdot\frac{NE_{k_{\textit{śr}}}}{V} \unit{Pa}
-    \end{equation}
-    gdzie $N$ - liczba cząstek gazu
-    \begin{equation}
-      E_{k_{\acute sr.}} = \frac{1}{2}mv_{\acute sr.}^2 \unit{J}
-    \end{equation}
-  \section{Równanie gazu doskonałego}
-    \begin{equation}
-      \frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2} \Rightarrow \frac{pV}{T} = \const
-    \end{equation}
-    \subsection{Równanie Clapeyrona}
-      \begin{equation}
-        pV = nRT = NkT
-      \end{equation}
-      gdzie:
-      \begin{gather}
-        R =  8,31 \unit{\frac{J}{mol\cdot K}}\\
-        k = \frac{R}{N_A} = 1,38\cdot 10^{-23} \unit{\frac{J}{K}}
-      \end{gather}
-  \section{Przemiany gazu doskonałego}
+\section{Zasady dynamiki}
 
-    \subsection{Przemiana izotermiczna}
-      \begin{gather}
-        T = \const\\
-        \frac{p_1V_1}{T} = \frac{p_2V_2}{T} \Rightarrow p_1V_1 = p_2V_2\\
-        pV = \const \Rightarrow p = \frac{const.}{V}\\
-        \text{(Prawo Boyle'a)}
-      \end{gather}
-    \subsection{Przemiana izochoryczna}
-      \begin{gather}
-        V = \const\\
-        \frac{p_1V}{T_1} = \frac{p_2V}{T_2} \Rightarrow \frac{p_1}{T_1} = \frac{p_2}{T_2}\\
-        \frac{p}{T} = \const \Rightarrow p = T\cdot const.\\\text{(Prawo Charles'a)}
-      \end{gather}
-      % \begin{tikzpicture}
-      %   \draw[->] (-0.3, 0) -- (4, 0) node[below] {$T$};
-      %   \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
-      %   \draw[thick] (0.58, 0.5) -- (3.5, 3);
-      %   \draw[dotted] (0, 0) -- (0.58, 0.5);
-      % \end{tikzpicture}
+\begin{law}{Zerowa zasada dynamiki}
+  Jeżeli ciało A jest w równowadze termodynamicznej z ciałem B, a ciało B jest w równowadze
+  termodynamicznej z ciałem C, to ciała A i C są również w równowadze termodynamicznej.
+\end{law}
 
-    \subsection{Przemiana izobaryczna}
-      \begin{gather}
-        p = \const\\
-        \frac{pV_1}{T_1} = \frac{pV_2}{T_2} \Rightarrow \frac{V_1}{T_1} = \frac{V_2}{T_2}\\
-        \frac{V}{T} = \const \Rightarrow V = T\cdot const.\\
-        \text{(Prawo Gay-Lussaca)}
-      \end{gather}
-      % \begin{tikzpicture}
-      %   \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
-      %   \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$T$};
-      %   \draw[thick] (0.58, 0.5) -- (3.5, 3);
-      %   \draw[dotted] (0, 0) -- (0.58, 0.5);
-      % \end{tikzpicture}
-  \section{Pierwsza zasada termodynamiki}
-    \begin{equation}
-      \Delta U = Q + W_z \unit{J}
-    \end{equation}
-    dla $Q > 0$ ciepło zostało pobrane\\
-    dla $Q < 0$ ciepło zostało oddane
-    \begin{gather}
-      W_z = F_z\Delta x\cos\measuredangle(\vec F_z, \Delta\vec x)\\
-      W_z = -W_{gazu}
-    \end{gather}
-    dla $W_z > 0$:
-    \begin{equation}
-      W_z = F_z\Delta x
-    \end{equation}
-    dla $W_z < 0$:
-    \begin{equation}
-      W_z = -F_z\Delta x
-    \end{equation}
-    \begin{equation}
-      |W| = p|\Delta V|
-    \end{equation}
-  \section{Energia wewnętrzna gazu doskonałego}
-    \begin{gather}
-      U = N\cdot\frac{i}{2}kT\\
-      \Delta U = N\cdot\frac{i}{2}k\Delta T
-    \end{gather}
-    gdzie $i$ - stopnie swobody cząstek
-    \subsection{Przemiana izotermiczna}
-      \begin{gather}
-        T = \const \Leftrightarrow U = const.\\
-        \Delta U = 0 \Rightarrow Q + W = 0
-      \end{gather}
-    \subsection{Przemiana izochoryczna}
-      \begin{gather}
-        V = \const \Rightarrow \Delta V = 0\\
-        W = 0 \Rightarrow \Delta U = Q
-      \end{gather}
-    \subsection{Przemiana adiabatyczna}
-      \begin{gather}
-        Q = 0 \Rightarrow \Delta U = W\\
-        pV^\kappa = \const
-      \end{gather}
-      gdzie:
-      \begin{equation}
-        \kappa = \frac{C_p}{C_V}
-      \end{equation}
-  \section{Ciepło molowe i właściwe}
-    \subsection{Ciepło właściwe}
-      \begin{gather}
-        C_w = \frac{Q}{m\Delta T} \unit{\frac{J}{kg\cdot K}}\\
-        Q = mC_w\Delta T
-      \end{gather}
-    \subsection{Ciepło molowe}
-      \begin{equation}
-        C = \frac{Q}{n\Delta T} \unit{\frac{J}{mol\cdot K}}
-      \end{equation}
-      ciepło molowe przy stałym ciśnieniu: $C_p$\\
-      ciepło molowe przy stałej objętości: $C_V$
-      \begin{align}
-        &Q_p = Q_V + p\Delta V\\
-        &C_p = C_V + R
-      \end{align}
-  \section{Energia wewnętrzna jako funkcja stanu}
-    \begin{equation}
-      \Delta U = Q_V = nC_V\Delta T
-    \end{equation}
-    \section{Silnik cieplny}
-      % \begin{center}
-      %   \begin{tikzpicture}[scale=1.5]
-      %     \draw[->] (-0.3, 0) -- (4, 0) node[below] {$V$};
-      %     \draw[->] (0, -0.3) -- (0, 3.5) node[left] {$p$};
-      %     \draw[thick, ->] (1, 3) -- (2.5, 2.6);
-      %     \draw[thick, ->] (2.5, 2.6) -- (3, 1);
-      %     \draw[thick, <-] (1, 3) arc (180:270:2);
-      %     \draw (2.05, 2.05) node {\LARGE $W$};
-      %   \end{tikzpicture}
-      % \end{center}
-    \begin{equation}
-      \eta = \frac{|Q_1|-|Q_2|}{Q_1} = \frac{T_1 - T_2}{T_1}
-    \end{equation}
-  \section{Przejścia fazowe}
-    \begin{equation}
-      Q = mC_w\Delta T
-    \end{equation}
-    woda - lód: $T_T = T_K = 0^\circ C$\\
-    woda - para wodna: $T_W = T_S = 100^\circ C$
-    \begin{equation}
-      Q = mL
-    \end{equation}
-    \begin{equation}
-      Q = mR
-    \end{equation}
-  \section{Rozszerzalność temperaturowa ciał}
-    \subsection{Rozszerzalność obiętościowa}
-      \begin{equation}
-        \Delta V = V_0\alpha\Delta T
-      \end{equation}
-    \subsection{Rozszerzalność liniowa}
-      \begin{equation}
-        \Delta l = l_0\lambda\Delta T
-      \end{equation}
+\begin{law}{Pierwsza zasada termodynamiki}
+  Zmiana energii wewnętrznej ciała jest równa sumie ilości ciepła wymienionego z otoczeniem i pracy
+  wykonanej nad ciałem przez siłę zewnętrzną.
+\end{law}
+
+\begin{equation*}
+  p = \frac 2 3 \cdot \frac{NE_{k_\text{śr}}}{V} \unit{Pa}
+\end{equation*}
+gdzie $N$ - liczba cząstek gazu
+\begin{equation*}
+  E_{k_\text{śr}} = \frac 1 2 mv_\text{śr}^2 \unit J
+\end{equation*}
+
+\section{Równanie gazu doskonałego}
+\begin{equation*}
+  \frac{p_1 V_1}{T_1} = \frac{p_2 V_2}{T_2} \Rightarrow \frac{pV}{T} = \const
+\end{equation*}
+
+\subsection{Równanie Clapeyrona}
+\begin{equation}
+  pV = nRT = NkT
+\end{equation}
+gdzie:
+\begin{gather*}
+  R =  8,31 \unit{\frac{J}{mol \cdot K}}\\
+  k = \frac{R}{N_A} = 1,38 \cdot 10^{-23} \unit{\frac J K}
+\end{gather*}
+
+\section{Przemiany gazu doskonałego}
+
+\subsection{Przemiana izotermiczna}
+\begin{gather*}
+  T = \const\\
+  \frac{p_1 V_1}{T} = \frac{p_2 V_2}{T} \Rightarrow p_1 V_1 = p_2 V_2\\
+  pV = \const \Rightarrow p = \frac{\const}{V}\\ \text{(Prawo Boyle'a)}
+\end{gather*}
+
+\subsection{Przemiana izochoryczna}
+\begin{gather*}
+  V = \const\\
+  \frac{p_1 V}{T_1} = \frac{p_2 V}{T_2} \Rightarrow \frac{p_1}{T_1} = \frac{p_2}{T_2}\\
+  \frac p T = \const \Rightarrow p = T \cdot \const\\ \text{(Prawo Charles'a)}
+\end{gather*}
+
+\subsection{Przemiana izobaryczna}
+\begin{gather*}
+  p = \const\\
+  \frac{p V_1}{T_1} = \frac{p V_2}{T_2} \Rightarrow \frac{V_1}{T_1} = \frac{V_2}{T_2}\\
+  \frac V T = \const \Rightarrow V = T \cdot \const\\ \text{(Prawo Gay-Lussaca)}
+\end{gather*}
+
+\section{Pierwsza zasada termodynamiki}
+\begin{equation}
+  \Delta U = Q + W_z \unit J
+\end{equation}
+dla $Q > 0$ ciepło zostało pobrane\\
+dla $Q < 0$ ciepło zostało oddane
+
+\begin{gather*}
+  W_z = F_z \Delta x \cos\measuredangle(\vec F_z, \Delta \vec x)\\
+  W_z = -W_\text{gazu}
+\end{gather*}
+dla $W_z > 0$:
+\begin{equation*}
+  W_z = F_z \Delta x
+\end{equation*}
+dla $W_z < 0$:
+\begin{equation*}
+  W_z = -F_z \Delta x
+\end{equation*}
+\begin{equation*}
+  |W| = p|\Delta V|
+\end{equation*}
+
+\section{Energia wewnętrzna gazu doskonałego}
+\begin{gather*}
+  U = N \cdot\frac i 2 kT\\
+  \Delta U = N \cdot \frac i 2 k \Delta T
+\end{gather*}
+gdzie $i$ -- stopnie swobody cząstek
+
+\subsection{Przemiana izotermiczna}
+\begin{gather*}
+  T = \const \Leftrightarrow U = \const\\
+  \Delta U = 0 \Rightarrow Q + W = 0
+\end{gather*}
+
+\subsection{Przemiana izochoryczna}
+\begin{gather*}
+  V = \const \Rightarrow \Delta V = 0\\
+  W = 0 \Rightarrow \Delta U = Q
+\end{gather*}
+
+\subsection{Przemiana adiabatyczna}
+\begin{gather*}
+  Q = 0 \Rightarrow \Delta U = W\\
+  p V^\kappa = \const
+\end{gather*}
+gdzie:
+\begin{equation*}
+  \kappa = \frac{C_p}{C_V}
+\end{equation*}
+
+\section{Ciepło właściwe i molowe }
+
+\subsection{Ciepło właściwe}
+\begin{gather*}
+  C_w = \frac{Q}{m \Delta T} \unit{\frac{J}{kg \cdot K}}\\
+  Q = m C_w \Delta T
+\end{gather*}
+
+\subsection{Ciepło molowe}
+\begin{equation*}
+  C = \frac{Q}{n \Delta T} \unit{\frac{J}{mol \cdot K}}
+\end{equation*}
+ciepło molowe przy stałym ciśnieniu: $C_p$\\
+ciepło molowe przy stałej objętości: $C_V$
+
+\begin{gather*}
+  Q_p = Q_V + p \Delta V\\
+  C_p = C_V + R
+\end{gather*}
+
+\section{Energia wewnętrzna jako funkcja stanu}
+\begin{equation}
+  \Delta U = Q_V = n C_V \Delta T
+\end{equation}
+
+\section{Silnik cieplny}
+\begin{equation*}
+  \eta = \frac{|Q_1|-|Q_2|}{Q_1} = \frac{T_1 - T_2}{T_1}
+\end{equation*}
+
+\section{Przejścia fazowe}
+\begin{equation*}
+  Q = m C_w \Delta T
+\end{equation*}
+woda - lód: $T_T = T_K = 0^\circ C$\\
+woda - para wodna: $T_W = T_S = 100^\circ C$
+
+\begin{equation*}
+  Q = mL
+\end{equation*}
+
+\begin{equation*}
+  Q = mR
+\end{equation*}
+
+\section{Rozszerzalność temperaturowa ciał}
+
+\subsection{Rozszerzalność objętościowa}
+\begin{equation*}
+  \Delta V = V_0 \alpha \Delta T
+\end{equation*}
+
+\subsection{Rozszerzalność liniowa}
+\begin{equation*}
+  \Delta l = l_0 \lambda \Delta T
+\end{equation*}
