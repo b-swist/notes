@@ -1,4 +1,5 @@
 \chapter{Trygonometria}
+
 \begin{center}
   \begin{tikzpicture}
     \draw[thick] (0, 0) -- (6, 0) node[midway, below]{$a$}
@@ -6,13 +7,14 @@
     -- cycle node[midway, left]{$b$};
     \draw (0.7, 0) arc (0:90:0.7);
     \draw (5, 0.65) arc (140:180:1);
-    \node at (5.2, 0.23){\large$\alpha$};
+    \node at (5.2, 0.23){\large $\alpha$};
   \end{tikzpicture}
 \end{center}
+
 \begin{equation}
   \begin{aligned}
-    \sin\alpha &= \frac bc \qquad\qquad&\tg\alpha &= \frac ba\\[2pt]
-    \cos\alpha &= \frac ac \qquad\qquad&\ctg\alpha &= \frac ab
+    \sin \alpha &= \frac b c \qquad\qquad& \tg \alpha &= \frac b a\\[1em]
+    \cos \alpha &= \frac a c \qquad\qquad& \ctg\alpha &= \frac a b
   \end{aligned}
 \end{equation}
 \vspace{20pt}
@@ -21,35 +23,41 @@
     \hline
     & $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$\\
     \hline
-    $\sin\alpha$ & 0 & $\frac 12$ & $\frac{\sqrt2}{2}$ & $\frac{\sqrt3}{2}$ & 1\\
+    $\sin \alpha$ & 0 & $\frac 1 2$ & $\frac{\sqrt 2}{2}$ & $\frac{\sqrt 3}{2}$ & 1\\
     \hline
-    $\cos\alpha$ & 1 & $\frac{\sqrt3}{2}$ & $\frac{\sqrt2}{2}$ & $\frac 12$ & 0\\
+    $\cos \alpha$ & 1 & $\frac{\sqrt 3}{2}$ & $\frac{\sqrt 2}{2}$ & $\frac 1 2$ & 0\\
     \hline
-    $\tg\alpha$ & 0 & $\frac{\sqrt3}{3}$ & 1 & $\sqrt3$ & -\\
+    $\tg \alpha$ & 0 & $\frac{\sqrt 3}{3}$ & 1 & $\sqrt 3$ & -\\
     \hline
-    $\ctg\alpha$ & - & $\sqrt3$ & 1 & $\frac{\sqrt3}{3}$ & 0\\
+    $\ctg \alpha$ & - & $\sqrt 3$ & 1 & $\frac{\sqrt 3}{3}$ & 0\\
     \hline
   \end{tabular}
 \end{center}
+
 \section{Zależności trygonometryczne}
 \begin{equation}
   \begin{aligned}
-    \sin(90^\circ - \alpha) &= \cos\alpha\\
-    \cos(90^\circ - \alpha) &= \sin\alpha\\
-    \tg(90^\circ - \alpha) &= \ctg\alpha\\
-    \ctg(90^\circ - \alpha) &= \tg\alpha
+    \sin(90^\circ - \alpha) &= \cos \alpha\\
+    \cos(90^\circ - \alpha) &= \sin \alpha\\
+    \tg(90^\circ - \alpha) &= \ctg \alpha\\
+    \ctg(90^\circ - \alpha) &= \tg \alpha
   \end{aligned}
 \end{equation}
+
 \begin{equation}
   \begin{aligned}
-    \tg\alpha = \frac{\sin\alpha}{\cos\alpha}\\[4pt]
-    \ctg\alpha = \frac{\cos\alpha}{\sin\alpha}
+    \tg \alpha = \frac{\sin \alpha}{\cos \alpha}\\[0.5em]
+    \ctg \alpha = \frac{\cos \alpha}{\sin \alpha}
   \end{aligned}
 \end{equation}
-\begin{gather}
-  \sin^2\alpha + \cos^2\alpha = 1\\
-  \tg\alpha\cdot\ctg\alpha = 1
-\end{gather}
+
+\begin{subequations}
+  \begin{gather}
+    \sin^2 \alpha + \cos^2 \alpha = 1\\
+    \tg \alpha \cdot \ctg \alpha = 1
+  \end{gather}
+\end{subequations}
+
 \section{Funkcje trygonometryczne dowolnego kąta}
 \begin{center}
   \begin{tikzpicture}
@@ -77,4 +85,3 @@
     \node at (2, -1){$\ctg\alpha < 0$};
   \end{tikzpicture}
 \end{center}
-
