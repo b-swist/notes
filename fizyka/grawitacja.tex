@@ -1,94 +1,115 @@
 \chapter{Grawitacja}
-  \section{Prawa Keplera}
-    \begin{law}{Pierwsze prawo Keplera}
-      Planety poruszają się po elipsach, a jednym z jej ognisk znajduje się Słońce.
-    \end{law}
-    \begin{law}{Drugie prawo Keplera}
-      Promień wodzący planety w jednolitych odstępach czasu zakreśla jednolite pola.
-      \begin{align*}
-        s_1 &= s_2\\
-        L_1 = L_2 &\Rightarrow r_1v_1 = r_2v_2
-      \end{align*}
-    \end{law}
-    \begin{law}{Trzecie prawo Keplera}
-      Iloraz kwadratu okresu obiegu planety wokół Słońca i sześcianu średniej odległości planety od Słońca jest jednakowy dla wszystkich planet Układu Słonecznego.
-      \begin{equation*}
-        \frac{T^2}{r^3} = \const
-      \end{equation*}
-    \end{law}
-  \section{Prawo powszechnego ciążenia}
-    \begin{law}{Prawo powszechnego ciążenia}
-      Siła wzajemnego oddziaływania dwóch ciał jest wprost proporcjonalna do iloczynu mas tych ciał i odwrotnie proporcjonalna do kwadratu odległości między ich średkami mas.
-      \begin{equation}
-        F = G\frac{m_1m_2}{r^2} \unit{N}
-      \end{equation}
-      \begin{symbols}
-        \item $G$ -- stała grawitacji
-      \end{symbols}
-      \begin{equation*}
-        G = 6,67\cdot 10^{-11} \unit{\frac{N\cdot m^2}{kg^2}}
-      \end{equation*}
-    \end{law}
-    \subsection{Siły grawitacji wewnątrz lub na powierzchni planety}
-      \begin{gather*}
-        F = \frac 43\pi RGdm\\
-        F \sim dR
-      \end{gather*}
-  \section{Pole grawitacyjne}
-    \begin{definition}
-      \bi{Pole grawitacyjne} to przestrzeń, w której na umieszczone tam ciała gdziała siła grawitacji. 
-    \end{definition}
-    \subsection{Natężenie pola grawitacyjnego}
-      \begin{definition}
-        \bi{Natężenie pola grawitacyjnego} to stosunek siły grawitacji działającej na ciało próbne do masy tego ciała.
-        \begin{subequations}
-          \begin{equation}
-            \vec\gamma = \frac{\vec F_g}{m} \units{\frac{N}{kg}}{\frac{m}{s^2}}
-          \end{equation}
-          dla pola centralnego:
-          \begin{equation}
-            \gamma = \frac{GM}{r^2}
-          \end{equation}
-        \end{subequations}
-      \end{definition}
-    \subsection{Praca w polu grawitacyjnym}
-      \begin{equation}
-        \begin{gathered}
-          W_{Z_{(A\rightarrow B)}} = GMm\left(\frac{1}{r_A} - \frac{1}{r_B}\right)\\
-          W_{g_{(A\rightarrow B)}} = -W_{Z_{(A\rightarrow B)}}
-        \end{gathered}
-      \end{equation}
-    \subsection{Energia w polu grawitacyjnym}
-      \begin{equation}
-        E_p = -\frac{GMm}{r}
-      \end{equation}
-    \subsection{Potencjał pola grawitacyjnego}
-      \begin{definition}
-        \bi{Potencjał pola grawitacyjnego} to stosunek energii potencjalnej ciała próbnego do jego masy.
-        \begin{subequations}
-          \begin{gather}
-            V = \frac{E_p}{m} \unit{\frac{J}{kg}}\\
-            \Delta V = \frac{\Delta E_p}{m}
-          \end{gather}
-        \end{subequations}
-      \end{definition}
-  \section{Prędkości kosmiczne}
-    \begin{definition}
-      \bi{Pierwsza prędkość kosmiczna} to prędkość, jaką trzeba nadać ciału by oderwało się z powierzchni źródła pola grawitacyjnego i krążyło wokół niego po orbicie kołowej.
-      \begin{equation*}
-        v_{\scriptscriptstyle\mathrm I} = \sqrt\frac{GM}{r}
-      \end{equation*}
-    \end{definition}
-    \begin{definition}
-      \bi{Druga prędkość kosmiczna} to prędkość, jaką trzeba nadać ciału by oddaliło się nieskończenie daleko od źródła pola grawitacyjnego.
-      \begin{equation*}
-        v_{\scriptscriptstyle\mathrm{II}} = \sqrt{\frac{2GM}{r}} = v_{\scriptscriptstyle\mathrm I}\sqrt2
-      \end{equation*}
-    \end{definition}
-    \subsection{Satelita geostacjonarny}
-      \begin{definition}
-        \bi{Satelita geostacjonarny} to taki satelita, który krąży nad powierzchnią w płaszczyźnie równika nad tym samym punktem (jego okres obiegu jest równy okresowi obrotu planety).
-        \begin{equation*}
-          r = \sqrt[3]{\frac{GMT^2}{4\pi^2}}
-        \end{equation*}
-      \end{definition}
+
+\section{Prawa Keplera}
+
+\begin{law}{Pierwsze prawo Keplera}
+  Planety poruszają się po elipsach, a jednym z jej ognisk znajduje się Słońce.
+\end{law}
+
+\begin{law}{Drugie prawo Keplera}
+  Promień wodzący planety w jednolitych odstępach czasu zakreśla jednolite pola.
+  \begin{align*}
+    s_1 &= s_2\\
+    L_1 = L_2 &\Rightarrow r_1 v_1 = r_2 v_2
+  \end{align*}
+\end{law}
+
+\begin{law}{Trzecie prawo Keplera}
+  Iloraz kwadratu okresu obiegu planety wokół Słońca i sześcianu średniej odległości planety od
+  Słońca jest jednakowy dla wszystkich planet Układu Słonecznego.
+  \begin{equation*}
+    \frac{T^2}{r^3} = \const
+  \end{equation*}
+\end{law}
+
+\section{Prawo powszechnego ciążenia}
+\begin{law}{Prawo powszechnego ciążenia}
+  Siła wzajemnego oddziaływania dwóch ciał jest wprost proporcjonalna do iloczynu mas tych ciał i
+  odwrotnie proporcjonalna do kwadratu odległości między ich środkami mas.
+  \begin{equation}
+    F = G\frac{m_1 m_2}{r^2} \unit N
+  \end{equation}
+  \begin{symbols}
+    \item $G$ -- stała grawitacji
+  \end{symbols}
+  \begin{equation*}
+    G = 6,67\cdot 10^{-11} \unit{\frac{N \cdot m^2}{kg^2}}
+  \end{equation*}
+\end{law}
+
+\subsection{Siły grawitacji wewnątrz lub na powierzchni planety}
+\begin{gather*}
+  F = \frac 4 3 \pi RGdm\\
+  F \sim dR
+\end{gather*}
+
+\section{Pole grawitacyjne}
+\begin{definition}
+  \bi{Pole grawitacyjne} to przestrzeń, w której na umieszczone tam ciała działa siła grawitacji.
+\end{definition}
+
+\subsection{Natężenie pola grawitacyjnego}
+\begin{definition}
+  \bi{Natężenie pola grawitacyjnego} to stosunek siły grawitacji działającej na ciało próbne do
+  masy tego ciała.
+  \begin{subequations}
+    \begin{equation}
+      \vec \gamma = \frac{\vec F_g}{m} \units{\frac{N}{kg}}{\frac{m}{s^2}}
+    \end{equation}
+    dla pola centralnego:
+    \begin{equation}
+      \gamma = \frac{GM}{r^2}
+    \end{equation}
+  \end{subequations}
+\end{definition}
+
+\subsection{Praca w polu grawitacyjnym}
+\begin{equation}
+  \begin{gathered}
+    W_{Z_{(A \rightarrow B)}} = GMm\left(\frac{1}{r_A} - \frac{1}{r_B}\right)\\
+    W_{g_{(A \rightarrow B)}} = -W_{Z_{(A \rightarrow B)}}
+  \end{gathered}
+\end{equation}
+
+\subsection{Energia w polu grawitacyjnym}
+\begin{equation}
+  E_p = -\frac{GMm}{r}
+\end{equation}
+
+\subsection{Potencjał pola grawitacyjnego}
+\begin{definition}
+  \bi{Potencjał pola grawitacyjnego} to stosunek energii potencjalnej ciała próbnego do jego masy.
+  \begin{subequations}
+    \begin{gather}
+      V = \frac{E_p}{m} \unit{\frac{J}{kg}}\\
+      \Delta V = \frac{\Delta E_p}{m}
+    \end{gather}
+  \end{subequations}
+\end{definition}
+
+\section{Prędkości kosmiczne}
+
+\begin{definition}
+  \bi{Pierwsza prędkość kosmiczna} to prędkość, jaką trzeba nadać ciału by oderwało się z
+  powierzchni źródła pola grawitacyjnego i krążyło wokół niego po orbicie kołowej.
+  \begin{equation*}
+    v_{\scriptscriptstyle\mathrm I} = \sqrt\frac{GM}{r}
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  \bi{Druga prędkość kosmiczna} to prędkość, jaką trzeba nadać ciału by oddaliło się nieskończenie
+  daleko od źródła pola grawitacyjnego.
+  \begin{equation*}
+    v_{\scriptscriptstyle \mathrm{II}} = \sqrt{\frac{2GM}{r}} = v_{\scriptscriptstyle\mathrm I} \sqrt 2
+  \end{equation*}
+\end{definition}
+
+\subsection{Satelita geostacjonarny}
+\begin{definition}
+  \bi{Satelita geostacjonarny} to taki satelita, który krąży nad powierzchnią w płaszczyźnie
+  równika nad tym samym punktem (jego okres obiegu jest równy okresowi obrotu planety).
+  \begin{equation*}
+    r = \sqrt[3]{\frac{GMT^2}{4\pi^2}}
+  \end{equation*}
+\end{definition}
