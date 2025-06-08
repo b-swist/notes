@@ -33,8 +33,8 @@
 \end{theorem}
 
 \begin{theorem}[Twierdzenie Darboux]
-  Jeśli funkcja $f$ jest ciągła w przedziale domkniętym $\langle a, b\rangle$ oraz $f(a) \cdot f(b)
-  < 0$, to istnieje taka liczba $c$, $c \in \langle a, b\rangle$, dla której $f(c) = 0$.
+  Jeśli funkcja $f$ jest ciągła w przedziale domkniętym $\langle a, b\rangle$ oraz $f(a) \cdot f(b) < 0$,
+  to istnieje taka liczba $c$, $c \in \langle a, b\rangle$, dla której $f(c) = 0$.
 \end{theorem}
 
 \section{Pochodna funkcji}
@@ -56,7 +56,7 @@
   \left[c \cdot f(x)\right]' = c \cdot f'(x)\\
   \left[f(x) \pm g(x)\right]' = f'(x) \pm g'(x)\\
   \left[f(x) \cdot g(x)\right]' = f'(x) \cdot g(x) + f(x) \cdot g'(x)\\
-  \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x) \cdot g(x) + f(x) \cdot  g'(x)}{\left[g(x)\right]^2}
+  \left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x) \cdot g(x) - f(x) \cdot  g'(x)}{\left[g(x)\right]^2}
 \end{gather*}
 
 \subsection{Pochodne funkcji złożonych}
@@ -65,10 +65,26 @@
   (g \circ f)'(x) = g'(f(x)) \cdot f'(x)
 \end{gather*}
 
+\subsection{Pochodna a monotoniczność funkcji}
+\begin{theorem}
+  Niech funkcja $f$ ma pochodną w przedziale $(a, b)$. Jeżeli dla każdego $x \in (a, b)$:
+  \begin{itemize}
+    \item $f'(x) > 0$, to $f$ jest rosnąca w $(a, b)$,
+    \item $f'(x) < 0$, to $f$ jest malejąca w $(a, b)$,
+    \item $f'(x) = 0$, to $f$ jest stała w $(a, b)$
+  \end{itemize}
+\end{theorem}
+
+\begin{theorem}
+  Jeżeli funkcja $f$ jest ciągła w przedziale $\langle a, b\rangle$ oraz rosnąca lub malejąca w
+  przedziale $(a, b)$, to jest też rosnąca lub malejąca w przedziale $\langle a, b\rangle$.
+\end{theorem}
+
 \section{Styczna do wykresu funkcji}
 \begin{gather*}
   y = f'(x_0)(x - x_0) + f(x_0)\\
   \tg \alpha = f'(x_0)
 \end{gather*}
+dla punktu $P(x_0, f(x_0))$
 
 % vim:spell:spl=pl
