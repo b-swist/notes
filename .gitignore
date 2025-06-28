@@ -1,5 +1,4 @@
 aux/
-out/*
-!out/*.pdf
+out/
 .direnv
 *.spl
