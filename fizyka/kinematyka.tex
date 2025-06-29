@@ -20,13 +20,16 @@
 \end{gather*}
 
 \section{Ruch jednostajny prostoliniowy}
+\Graph[scale=0.6]{./figures/01-kinematyka}
 \begin{gather*}
   v = \const\\
-  v = \frac s t = \tg \alpha\\
-  x(t) = x_0 \pm vt
+  v = \frac s t\\
+  s = vt\\
+  x = x_0 \pm vt
 \end{gather*}
 
 \section{Ruch jednostajnie przyspieszony}
+\Graph[scale=0.52]{./figures/02-kinematyka}
 \begin{gather*}
   a = \const\\
   a = \frac{\Delta v}{\Delta t}\\
@@ -45,6 +48,7 @@ jeżeli $v_0 = 0$:
 \end{equation*}
 
 \section{Ruch jednostajnie opóźniony}
+\Graph[scale=0.52]{./figures/03-kinematyka}
 \begin{gather*}
   v_k = v_0 - at\\[0.8em]
   \begin{aligned}
@@ -77,6 +81,7 @@ jeżeli $v_0 = 0$:
 \end{equation*}
 
 \section{Rzut poziomy}
+\Graph[scale=0.65]{./figures/04-kinematyka}
 \begin{gather*}
   h = \frac{g t^2}{2}\\
   x = v_0 t = v_0 \sqrt{\frac{2h}{g}}\\
@@ -84,28 +89,6 @@ jeżeli $v_0 = 0$:
 \end{gather*}
 
 \section{Rzut ukośny}
-% \begin{center}
-%   \begin{tikzpicture}
-%     \draw[gray, very thin] (0, 0) grid (9.8, 3.8);
-%     \draw[->, thin] (-0.3, 0) -- (10, 0) node[below] {$x$};
-%     \draw[->, thin] (0, -0.3) -- (0, 4) node[left] {$y$};
-%     \draw (4, 3) parabola (0, 0);
-%     \draw (4, 3) parabola (8, 0);
-%
-%     \draw[->, thick] (0, 0) -- (0.8, 0) node[midway, below] {$\vec v_{0_x}$};
-%     \draw[->, thick] (0, 0) -- (0, 1) node[midway, left] {$\vec v_{0_y}$};
-%     \draw[->, thick] (0, 0) -- (0.8, 1) node[midway, above, xshift=-1] {$\vec v_0$};
-%     \draw (0.6, 0) arc (0:50:0.6) node[below, xshift=-0.8, yshift=-2.5] {$\alpha$};
-%
-%     \draw[->, thick] (4, 3) -- (4.8, 3) node[midway, below] {$\vec v_{0_x}$};
-%
-%     \draw[->, thick] (8, 0) -- (8.8, 0) node[midway, above] {$\vec v_{0_x}$};
-%     \draw[->, thick] (8, 0) -- (8, -1) node[midway, left] {$\vec v_y$};
-%     \draw[->, thick] (8, 0) -- (8.8, -1) node[midway, right] {$\vec v$};
-%
-%     \draw[dotted, thick] (4, 0) -- (4, 3) node[midway, right] {$h_{max}$};
-%   \end{tikzpicture}
-% \end{center}
 \begin{align*}
   v_{0_x} &= v_0 \cos \alpha\\
   v_{0_y} &= v_0 \sin \alpha

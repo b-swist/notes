@@ -9,8 +9,10 @@
 % \usepackage[document]{ragged2e}
 \usepackage{microtype, tocloft}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{standalone, float}
 \usepackage{tikz, pgfplots}
 \pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
 
 \renewcommand\cftchapaftersnum{.}
 \cftsetindents{chapter}{0pt}{2.2em}
@@ -24,6 +26,13 @@
 \newcommand\units[2]{\;\left[\mathrm{#1},\,\mathrm{#2}\right]}
 \newcommand\tab{\hspace*{4mm}}
 \newcommand\bi[1]{\textbf{\textit{#1}}}
+
+\newcommand\Graph[2][]{
+  \begin{figure}[H]
+    \centering
+    \includestandalone[#1]{#2}
+  \end{figure}
+}
 
 \newenvironment{symbols}{\normalfont gdzie:
   \begin{list}{}{
